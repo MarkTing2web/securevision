@@ -67,7 +67,7 @@
   .check-list { list-style: none; margin-top: 20px; }
   .check-list li { display: flex; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--border-color); font-size: 14px; }
   .check-list li:last-child { border-bottom: none; }
-  .check-list li::before { content: '✓'; width: 20px; height: 20px; background: var(--accent); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+  .check-list li::before { content: 'âœ“'; width: 20px; height: 20px; background: var(--accent); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
   .spec-card { background: var(--light-gray); border: 1px solid var(--border-color); border-radius: 12px; padding: 36px; border-top: 4px solid var(--accent); }
   .spec-card h3 { margin-bottom: 20px; color: var(--accent); }
   .spec-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border-color); font-size: 14px; }
@@ -86,7 +86,7 @@
   .cat-specs { list-style: none; }
   .cat-specs li { font-size: 13px; color: var(--charcoal); padding: 5px 0; border-bottom: 1px solid var(--border-color); display: flex; gap: 8px; }
   .cat-specs li:last-child { border-bottom: none; }
-  .cat-specs li::before { content: '·'; color: var(--accent); font-weight: 700; font-size: 18px; line-height: 1; }
+  .cat-specs li::before { content: 'Â·'; color: var(--accent); font-weight: 700; font-size: 18px; line-height: 1; }
 
   /* GANTRYGO CALLOUT */
   #gantrygo { background: var(--white); }
@@ -168,31 +168,39 @@
     </style>
 <style id="sv-nav-css">
 .main-nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(14,26,43,.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08);height:68px;font-family:'Inter',sans-serif}
-.nav-container{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav-container{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:68px;position:relative}
 .nav-logo-link{display:flex;align-items:center;text-decoration:none}
 .nav-logo-img{height:40px;width:auto;display:block}
 .nav-menu{display:flex;list-style:none;gap:2px;margin:0;padding:0}
-.nav-item{position:relative}
-.nav-link{color:rgba(255,255,255,.8);text-decoration:none;font-size:14px;font-weight:500;padding:22px 13px;display:block;white-space:nowrap;transition:.2s}
+.nav-item{position:static}
+.nav-link{color:rgba(255,255,255,.8);text-decoration:none;font-size:14px;font-weight:500;display:flex;align-items:center;height:68px;padding:0 13px;white-space:nowrap;transition:.2s}
 .nav-link:hover,.nav-link.active{color:#fff}
-.has-dropdown::after{content:" ▾";font-size:9px;opacity:.5}
+.has-dropdown::after{content:" â–¾";font-size:9px;opacity:.5}
 .nav-cta-btn{background:#0056b3;color:#fff;padding:9px 16px;border-radius:6px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;text-decoration:none;white-space:nowrap;transition:.2s;flex-shrink:0}
 .nav-cta-btn:hover{background:#003d82}
 .mobile-toggle{display:none;background:none;border:none;color:#fff;font-size:22px;cursor:pointer;padding:8px}
-.mega-menu{position:absolute;top:100%;background:#fff;border:1px solid #E8EAED;border-radius:12px;box-shadow:0 12px 40px rgba(0,0,0,.15);padding:24px;display:none;z-index:200}
+.mega-menu{position:absolute;top:100%;background:#fff;border:1px solid #E8EAED;border-radius:12px;box-shadow:0 12px 40px rgba(0,0,0,.15);padding:24px;display:none;z-index:200;max-width:calc(100vw - 48px);overflow-x:auto}
 .nav-item:hover>.mega-menu{display:grid;opacity:1}
-.mega-menu-solutions{width:820px;grid-template-columns:1fr 1.6fr;gap:24px;left:50%;transform:translateX(-50%)}
-.mega-menu-technology{width:960px;grid-template-columns:1fr 1.3fr 1.3fr;gap:0;left:50%;transform:translateX(-50%)}
+.mega-menu-solutions{width:820px;grid-template-columns:1fr 1.6fr;gap:24px;left:auto;right:10px}
+.mega-menu-technology{width:960px;grid-template-columns:1fr 1.3fr 1.3fr;gap:0;left:auto;right:10px}
 .mega-menu-technology .mega-guidance{padding-right:20px;border-right:1px solid #E8EAED}
 .mega-menu-technology .mega-links-col{padding:0 20px;border-right:1px solid #E8EAED}
 .mega-brands-col{padding-left:20px}
-.mega-menu-portfolio{width:820px;grid-template-columns:1fr 1fr 1fr;gap:20px;left:50%;transform:translateX(-50%)}
-.mega-menu-resources{width:880px;grid-template-columns:repeat(4,1fr);gap:16px;left:50%;transform:translateX(-50%)}
-.mega-menu-insights{width:720px;grid-template-columns:1fr 1.6fr;gap:24px;right:0}
-.mega-menu-about{width:320px;right:0;display:block!important;padding:20px}
+.mega-menu-portfolio{width:820px;grid-template-columns:1fr 1fr 1fr;gap:20px;left:auto;right:10px}
+.mega-menu-resources{width:880px;grid-template-columns:repeat(4,1fr);gap:16px;left:auto;right:10px}
+.mega-menu-insights{width:720px;grid-template-columns:1fr 1.6fr;gap:24px;right:10px}
+.mega-menu-about{width:320px;right:10px;display:block!important;padding:20px}
 .nav-item:hover>.mega-menu-about{display:block!important}
-.mega-menu-contact{width:280px;right:0;display:block!important;padding:18px}
+.mega-menu-contact{width:280px;right:10px;display:block!important;padding:18px}
 .nav-item:hover>.mega-menu-contact{display:block!important}
+@media (max-width: 1024px) {
+  .mega-menu-solutions{width:720px;grid-template-columns:1fr 1fr}
+  .mega-menu-technology{width:720px;grid-template-columns:1fr 1.2fr}
+  .mega-brands-col{display:none}
+  .mega-menu-portfolio{width:720px;grid-template-columns:1fr 1fr 1fr;gap:12px}
+  .mega-menu-resources{width:720px;grid-template-columns:repeat(2,1fr)}
+  .mega-menu{left: auto; right: 0; max-width: 100vw; transform: none;}
+}
 .mega-col-label{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#8a8f98;margin-bottom:12px;display:block}
 .mega-guidance h4{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;color:#1B1F23;margin:0 0 6px}
 .mega-guidance p{font-size:12px;color:#5F6368;margin:0 0 10px;line-height:1.5}
@@ -214,6 +222,9 @@
 .brand-name-links{display:flex;flex-wrap:wrap;gap:3px}
 .brand-name-link{font-size:11px;font-weight:500;color:#5F6368;text-decoration:none;padding:2px 7px;border-radius:4px;background:#F8F9FA;border:1px solid #E8EAED;transition:.15s}
 .brand-name-link:hover{color:#0056b3;border-color:#0056b3;background:#fff}
+.brand-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:12px}
+.brand-grid a{font-size:12px;color:#5F6368;text-decoration:none;padding:4px 0;transition:.15s;display:block}
+.brand-grid a:hover{color:#0056b3}
 .mega-port-col{display:flex;flex-direction:column;gap:2px}
 .port-link{display:flex;align-items:center;gap:7px;padding:6px 8px;border-radius:5px;text-decoration:none;color:#1B1F23;font-size:13px;transition:.15s}
 .port-link:hover{background:#F8F9FA;color:#0056b3}
@@ -292,55 +303,63 @@ a.mobile-menu-item:hover{color:#fff}
 <body>
 <nav class="main-nav">
 <div class="nav-container">
-  <a href="index.html" class="nav-logo-link" aria-label="Securevision">
-    <img src="/images/securevision-logo-light.svg" alt="Securevision" class="nav-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-    <span style="display:none;font-family:'Montserrat',sans-serif;font-weight:700;font-size:22px;color:#fff">Securevision</span>
+  <a href="index.html" class="nav-logo-link" aria-label="Securevision" style="gap: 8px;">
+    <img src="/proprietary-assets/securevision-dark-logo.png" alt="Securevision" class="nav-logo-img" style="height: 38px;">
+    <span style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:22px;color:#ffffff;letter-spacing:0.5px;">Securevision</span>
   </a>
   <ul class="nav-menu">
     <li class="nav-item"><a href="solutions-hub.html" class="nav-link has-dropdown">Solutions</a>
       <div class="mega-menu mega-menu-solutions">
-        <div class="mega-guidance"><div class="mega-col-label">Need Help Choosing?</div><h4>Not Sure Which Solution Fits?</h4><p>Every property type has unique risks.</p><a href="solutions-hub.html" class="view-all-link">→ View All Solutions</a><div class="mega-trust"><div class="trust-item">✓ Police Licensed L/PS/000267/2023P</div><div class="trust-item">✓ 19+ Years · 2,000+ Sites</div><div class="trust-item">✓ bizSAFE Level 4 · BCA Registered</div></div></div>
-        <div class="mega-links-col"><div class="mega-col-label">By Property Type</div><a href="residential.html" class="solution-link"><strong>🏠 Private Homes</strong><small>Landed properties, bungalows, terraces</small></a><a href="condominiums.html" class="solution-link"><strong>🏘️ Condominiums</strong><small>MCSTs, managed estates, apartments</small></a><a href="commercial.html" class="solution-link"><strong>🏪 Commercial &amp; Retail</strong><small>Shops, offices, hotels</small></a><a href="institutions.html" class="solution-link"><strong>🏫 Institutions</strong><small>Schools, healthcare, government</small></a><a href="industrial.html" class="solution-link"><strong>🏭 Industrial &amp; Logistics</strong><small>Factories, warehouses, logistics</small></a></div>
+        <div class="mega-guidance"><div class="mega-col-label">Need Help Choosing?</div><h4>Not Sure Which Solution Fits?</h4><p>Every property type has unique risks.</p><a href="solutions-hub.html" class="view-all-link">â†’ View All Solutions</a><div class="mega-trust"><div class="trust-item">âœ“ Police Licensed L/PS/000267/2023P</div><div class="trust-item">âœ“ 19+ Years Â· 2,000+ Sites</div><div class="trust-item">âœ“ bizSAFE Level 4 Â· BCA Registered</div></div></div>
+        <div class="mega-links-col"><div class="mega-col-label">By Property Type</div><a href="residential.html" class="solution-link"><strong>ðŸ  Private Homes</strong><small>Landed properties, bungalows, terraces</small></a><a href="condominiums.html" class="solution-link"><strong>ðŸ˜ï¸ Condominiums</strong><small>MCSTs, managed estates, apartments</small></a><a href="commercial.html" class="solution-link"><strong>ðŸª Commercial &amp; Retail</strong><small>Shops, offices, hotels</small></a><a href="institutions.html" class="solution-link"><strong>ðŸ« Institutions</strong><small>Schools, healthcare, government</small></a><a href="industrial.html" class="solution-link"><strong>ðŸ­ Industrial &amp; Logistics</strong><small>Factories, warehouses, logistics</small></a></div>
       </div>
     </li>
     <li class="nav-item"><a href="technology.html" class="nav-link has-dropdown active">Technology</a>
       <div class="mega-menu mega-menu-technology">
-        <div class="mega-guidance"><div class="mega-col-label">Our Systems</div><h4>Security Systems &amp; Technology</h4><p>Four subsystem groups on the SECURE™ framework.</p><a href="technology.html" class="view-all-link">→ View All Technology</a><div class="mega-trust"><div class="trust-item">✓ SECURE™ Integration Methodology</div><div class="trust-item">✓ VESTA™ Enterprise Platform</div><div class="trust-item">✓ GantryGo™ Vehicle Intercom</div></div></div>
-        <div class="mega-links-col"><div class="mega-col-label">By System Type</div><a href="surveillance-systems.html" class="product-link"><span class="pl-dot" style="background:#2b6cb0"></span><div><strong>📹 Surveillance &amp; Detection</strong><small>IP cameras, AI analytics, NVR, alarms</small></div></a><a href="people-access.html" class="product-link"><span class="pl-dot" style="background:#319795"></span><div><strong>🚪 People Access Systems</strong><small>Biometrics, visitor management, intercom</small></div></a><a href="vehicle-access.html" class="product-link"><span class="pl-dot" style="background:#dd6b20"></span><div><strong>🚗 Vehicle Access Systems</strong><small>Boom gates, ANPR, GantryGo™</small></div></a><a href="platform-integration.html" class="product-link"><span class="pl-dot" style="background:#38a169"></span><div><strong>📊 Platform &amp; Integration</strong><small>VESTA™ dashboard, multi-site</small></div></a></div>
-        <div class="mega-brands-col"><div class="mega-col-label">Brands We Install</div><div class="brand-cat-group"><div class="brand-cat-title"><span class="bct-dot" style="background:#2b6cb0"></span>Surveillance</div><div class="brand-name-links"><a href="hikvision-singapore.html" class="brand-name-link">Hikvision</a><a href="hanwha-samsung-singapore.html" class="brand-name-link">Hanwha</a><a href="uniview-singapore.html" class="brand-name-link">Uniview</a><a href="milesight-singapore.html" class="brand-name-link">Milesight</a></div></div><div class="brand-cat-group"><div class="brand-cat-title"><span class="bct-dot" style="background:#e53e3e"></span>Alarm</div><div class="brand-name-links"><a href="ajax-alarm-singapore.html" class="brand-name-link">AJAX</a><a href="risco-alarm-singapore.html" class="brand-name-link">RISCO</a><a href="paradox-alarm-singapore.html" class="brand-name-link">Paradox</a><a href="dsc-alarm-singapore.html" class="brand-name-link">DSC</a><a href="ge-caddx-alarm-singapore.html" class="brand-name-link">GE Caddx</a></div></div><div class="brand-cat-group"><div class="brand-cat-title"><span class="bct-dot" style="background:#319795"></span>Access</div><div class="brand-name-links"><a href="zkteco-singapore.html" class="brand-name-link">ZKTeco</a><a href="suprema-singapore.html" class="brand-name-link">Suprema</a><a href="hid-singapore.html" class="brand-name-link">HID</a><a href="entrypass-singapore.html" class="brand-name-link">EntryPass</a><a href="microengine-singapore.html" class="brand-name-link">MicroEngine</a></div></div><div class="brand-cat-group"><div class="brand-cat-title"><span class="bct-dot" style="background:#2b6cb0"></span>Intercom</div><div class="brand-name-links"><a href="akuvox-singapore.html" class="brand-name-link">Akuvox</a><a href="aiphone-singapore.html" class="brand-name-link">Aiphone</a><a href="kocom-singapore.html" class="brand-name-link">Kocom</a></div></div><div class="brand-cat-group"><div class="brand-cat-title"><span class="bct-dot" style="background:#dd6b20"></span>Gates</div><div class="brand-name-links"><a href="faac-singapore.html" class="brand-name-link">FAAC</a><a href="mag-gates-singapore.html" class="brand-name-link">MAG</a><a href="dormer-singapore.html" class="brand-name-link">Dormer</a></div></div><a href="brands.html" class="view-all-link" style="margin-top:12px;font-size:12px">→ All 20 Brands</a></div>
+        <div class="mega-guidance"><div class="mega-col-label">Our Systems</div><h4>Security Systems &amp; Technology</h4><p>Four subsystem groups on the SECUREâ„¢ framework.</p><a href="technology.html" class="view-all-link">â†’ View All Technology</a><div class="mega-trust"><div class="trust-item">âœ“ SECUREâ„¢ Integration Methodology</div><div class="trust-item">âœ“ VESTAâ„¢ Enterprise Platform</div><div class="trust-item">âœ“ GantryGoâ„¢ Vehicle Intercom</div></div></div>
+        <div class="mega-links-col"><div class="mega-col-label">By System Type</div><a href="surveillance-systems.html" class="product-link"><span class="pl-dot" style="background:#2b6cb0"></span><div><strong>ðŸ“¹ Surveillance &amp; Detection</strong><small>IP cameras, AI analytics, NVR, alarms</small></div></a><a href="people-access.html" class="product-link"><span class="pl-dot" style="background:#319795"></span><div><strong>ðŸšª People Access Systems</strong><small>Biometrics, visitor management, intercom</small></div></a><a href="vehicle-access.html" class="product-link"><span class="pl-dot" style="background:#dd6b20"></span><div><strong>ðŸš— Vehicle Access Systems</strong><small>Boom gates, ANPR, GantryGoâ„¢</small></div></a><a href="platform-integration.html" class="product-link"><span class="pl-dot" style="background:#38a169"></span><div><strong>ðŸ“Š Platform &amp; Integration</strong><small>VESTAâ„¢ dashboard, multi-site</small></div></a></div>
+        <div class="mega-brands-col"><div class="mega-col-label">Brands We Represent</div><div class="brand-grid"><a href="hikvision-singapore.html">Hikvision</a><a href="hanwha-samsung-singapore.html">Hanwha</a><a href="uniview-singapore.html">Uniview</a><a href="milesight-singapore.html">Milesight</a><a href="ajax-alarm-singapore.html">AJAX</a><a href="risco-alarm-singapore.html">RISCO</a><a href="paradox-alarm-singapore.html">Paradox</a><a href="dsc-alarm-singapore.html">DSC</a><a href="zkteco-singapore.html">ZKTeco</a><a href="suprema-singapore.html">Suprema</a><a href="hid-singapore.html">HID</a><a href="entrypass-singapore.html">EntryPass</a><a href="akuvox-singapore.html">Akuvox</a><a href="aiphone-singapore.html">Aiphone</a><a href="faac-singapore.html">FAAC</a><a href="mag-gates-singapore.html">MAG</a></div><a href="brands.html" class="view-all-link" style="margin-top:2px;font-size:12px">â†’ All 20 Brands</a></div>
       </div>
     </li>
     <li class="nav-item"><a href="portfolio.html" class="nav-link has-dropdown">Portfolio</a>
       <div class="mega-menu mega-menu-portfolio">
         <div class="mega-port-col"><div class="mega-col-label">By Property</div><a href="portfolio.html?filter=residential" class="port-link"><span class="port-dot" style="background:#38B000"></span>Private Homes</a><a href="portfolio.html?filter=condominium" class="port-link"><span class="port-dot" style="background:#4361EE"></span>Condominiums</a><a href="portfolio.html?filter=commercial" class="port-link"><span class="port-dot" style="background:#FF6D00"></span>Commercial</a><a href="portfolio.html?filter=institution" class="port-link"><span class="port-dot" style="background:#0056b3"></span>Institutions</a><a href="portfolio.html?filter=industrial" class="port-link"><span class="port-dot" style="background:#7209B7"></span>Industrial</a></div>
         <div class="mega-port-col"><div class="mega-col-label">By System</div><a href="portfolio.html?filter=surveillance" class="port-link"><span class="port-dot" style="background:#2b6cb0"></span>Surveillance</a><a href="portfolio.html?filter=people-access" class="port-link"><span class="port-dot" style="background:#319795"></span>People Access</a><a href="portfolio.html?filter=vehicle-access" class="port-link"><span class="port-dot" style="background:#dd6b20"></span>Vehicle Access</a><a href="portfolio.html?filter=platform" class="port-link"><span class="port-dot" style="background:#38a169"></span>Platform</a><a href="portfolio.html" class="port-link"><span class="port-dot" style="background:#888"></span>All Projects</a></div>
-        <div class="mega-port-col"><div class="mega-col-label">Featured</div><a href="portfolio-lviv.html" class="port-featured"><div class="pf-label">Condominium</div><div class="pf-title">The L'viv</div><div class="pf-meta">VESTA™ + GantryGo™</div></a><a href="portfolio-scape.html" class="port-featured"><div class="pf-label">Commercial</div><div class="pf-title">SCAPE</div><div class="pf-meta">200-camera AI system</div></a><a href="portfolio-sta.html" class="port-featured"><div class="pf-label">Institution</div><div class="pf-title">STA</div><div class="pf-meta">99.7% uptime</div></a><a href="portfolio-cyrus.html" class="port-featured"><div class="pf-label">Industrial</div><div class="pf-title">Cyrus Tech</div><div class="pf-meta">–85% callouts</div></a></div>
+        <div class="mega-port-col"><div class="mega-col-label">Featured</div><a href="portfolio-lviv.html" class="port-featured"><div class="pf-label">Condominium</div><div class="pf-title">The L'viv</div><div class="pf-meta">VESTAâ„¢ + GantryGoâ„¢</div></a><a href="portfolio-scape.html" class="port-featured"><div class="pf-label">Commercial</div><div class="pf-title">SCAPE</div><div class="pf-meta">200-camera AI system</div></a><a href="portfolio-sta.html" class="port-featured"><div class="pf-label">Institution</div><div class="pf-title">STA</div><div class="pf-meta">99.7% uptime</div></a><a href="portfolio-cyrus.html" class="port-featured"><div class="pf-label">Industrial</div><div class="pf-title">Cyrus Tech</div><div class="pf-meta">â€“85% callouts</div></a></div>
       </div>
     </li>
     <li class="nav-item"><a href="resources.html" class="nav-link has-dropdown">Resources</a>
-      <div class="mega-menu mega-menu-resources"><div class="mega-res-col"><div class="res-col-header"><span>🧮</span><h4>Planning Tools</h4></div><a href="resources.html" class="res-link">Security Calculator <span class="rl-soon">Soon</span></a><a href="resources.html" class="res-link">Risk Assessment <span class="rl-soon">Soon</span></a></div><div class="mega-res-col"><div class="res-col-header"><span>📚</span><h4>Guides</h4></div><a href="resources-cctv-guide.html" class="res-link">CCTV Buyer's Guide</a><a href="resources-access-control.html" class="res-link">Access Control</a><a href="resources-anpr.html" class="res-link">How ANPR Works</a><a href="resources-integrated-systems.html" class="res-link">Integrated vs Standalone</a></div><div class="mega-res-col"><div class="res-col-header"><span>🔧</span><h4>Support</h4></div><a href="resources-troubleshoot.html" class="res-link">Troubleshooting</a><a href="resources-maintenance.html" class="res-link">Maintenance</a><a href="resources-faq.html" class="res-link">FAQs</a><a href="contact.html" class="res-link">Contact Support</a></div><div class="mega-res-col"><div class="res-col-header"><span>📥</span><h4>Downloads</h4></div><a href="resources.html" class="res-link">Spec Sheets <span class="rl-soon">Soon</span></a><a href="resources.html" class="res-link">Wiring Guides <span class="rl-soon">Soon</span></a></div></div>
+      <div class="mega-menu mega-menu-resources"><div class="mega-res-col"><div class="res-col-header"><span>ðŸ§®</span><h4>Planning Tools</h4></div><a href="resources.html" class="res-link">Security Calculator <span class="rl-soon">Soon</span></a><a href="resources.html" class="res-link">Risk Assessment <span class="rl-soon">Soon</span></a></div><div class="mega-res-col"><div class="res-col-header"><span>ðŸ“š</span><h4>Guides</h4></div><a href="resources-cctv-guide.html" class="res-link">CCTV Buyer's Guide</a><a href="resources-access-control.html" class="res-link">Access Control</a><a href="resources-anpr.html" class="res-link">How ANPR Works</a><a href="resources-integrated-systems.html" class="res-link">Integrated vs Standalone</a></div><div class="mega-res-col"><div class="res-col-header"><span>ðŸ”§</span><h4>Support</h4></div><a href="resources-troubleshoot.html" class="res-link">Troubleshooting</a><a href="resources-maintenance.html" class="res-link">Maintenance</a><a href="resources-faq.html" class="res-link">FAQs</a><a href="contact.html" class="res-link">Contact Support</a></div><div class="mega-res-col"><div class="res-col-header"><span>ðŸ“¥</span><h4>Downloads</h4></div><a href="resources.html" class="res-link">Spec Sheets <span class="rl-soon">Soon</span></a><a href="resources.html" class="res-link">Wiring Guides <span class="rl-soon">Soon</span></a></div></div>
     </li>
     <li class="nav-item"><a href="insights.html" class="nav-link has-dropdown">Insights</a>
-      <div class="mega-menu mega-menu-insights"><div class="mega-guidance"><div class="mega-col-label">Latest</div><a href="insights-integrated-systems.html" class="insights-featured"><span class="if-tag">Security Planning</span><div class="if-title">Why Integrated Systems Outperform Standalone</div><div class="if-meta">6 min read</div></a><a href="insights.html" class="view-all-link" style="margin-top:10px">→ All Articles</a></div><div class="mega-links-col"><div class="mega-col-label">By Topic</div><a href="insights.html?cat=planning" class="insights-cat"><span class="ic-icon">🏗️</span><div class="ic-text"><strong>Security Planning</strong><small>Guides for property managers</small></div></a><a href="insights.html?cat=technology" class="insights-cat"><span class="ic-icon">🤖</span><div class="ic-text"><strong>Technology</strong><small>AI, ANPR, biometrics</small></div></a><a href="insights.html?cat=casestudy" class="insights-cat"><span class="ic-icon">📊</span><div class="ic-text"><strong>Case Studies</strong><small>Real projects, real outcomes</small></div></a><a href="insights.html?cat=industry" class="insights-cat"><span class="ic-icon">🇸🇬</span><div class="ic-text"><strong>SG Industry</strong><small>Regulations, trends</small></div></a></div></div>
+      <div class="mega-menu mega-menu-insights"><div class="mega-guidance"><div class="mega-col-label">Latest</div><a href="insights-integrated-systems.html" class="insights-featured"><span class="if-tag">Security Planning</span><div class="if-title">Why Integrated Systems Outperform Standalone</div><div class="if-meta">6 min read</div></a><a href="insights.html" class="view-all-link" style="margin-top:10px">â†’ All Articles</a></div><div class="mega-links-col"><div class="mega-col-label">By Topic</div><a href="insights.html?cat=planning" class="insights-cat"><span class="ic-icon">ðŸ—ï¸</span><div class="ic-text"><strong>Security Planning</strong><small>Guides for property managers</small></div></a><a href="insights.html?cat=technology" class="insights-cat"><span class="ic-icon">ðŸ¤–</span><div class="ic-text"><strong>Technology</strong><small>AI, ANPR, biometrics</small></div></a><a href="insights.html?cat=casestudy" class="insights-cat"><span class="ic-icon">ðŸ“Š</span><div class="ic-text"><strong>Case Studies</strong><small>Real projects, real outcomes</small></div></a><a href="insights.html?cat=industry" class="insights-cat"><span class="ic-icon">ðŸ‡¸ðŸ‡¬</span><div class="ic-text"><strong>SG Industry</strong><small>Regulations, trends</small></div></a></div></div>
     </li>
     <li class="nav-item"><a href="about.html" class="nav-link has-dropdown">About</a>
-      <div class="mega-menu mega-menu-about"><div class="mega-col-label" style="margin-bottom:10px">About Securevision</div><div class="about-preview-card"><div class="apc-founder"><div class="apc-avatar">👤</div><div><div class="apc-name">Ler Wee Meng</div><div class="apc-title">Founder · NUS Eng + UOL Law</div></div></div><div class="apc-quote">Built on engineering. Backed by law. Since 2006.</div></div><div class="about-links"><a href="about.html#founder" class="about-link"><span>👤</span> Founder's Story</a><a href="about.html" class="about-link"><span>🛡️</span> Credentials</a><a href="awards-certifications.html" class="about-link"><span>🏆</span> Awards</a></div></div>
+      <div class="mega-menu mega-menu-about"><div class="mega-col-label" style="margin-bottom:10px">About Securevision</div><div class="about-preview-card"><div class="apc-founder"><div class="apc-avatar">ðŸ‘¤</div><div><div class="apc-name">Ler Wee Meng</div><div class="apc-title">Founder Â· NUS Eng + UOL Law</div></div></div><div class="apc-quote">Built on engineering. Backed by law. Since 2006.</div></div><div class="about-links"><a href="about.html#founder" class="about-link"><span>ðŸ‘¤</span> Founder's Story</a><a href="about.html" class="about-link"><span>ðŸ›¡ï¸</span> Credentials</a><a href="awards-certifications.html" class="about-link"><span>ðŸ†</span> Awards</a></div></div>
     </li>
     <li class="nav-item"><a href="contact.html" class="nav-link has-dropdown">Contact</a>
-      <div class="mega-menu mega-menu-contact"><div class="mega-col-label" style="margin-bottom:10px">Get In Touch</div><div class="contact-channel-links"><a href="https://wa.me/6593860466" class="contact-ch-link whatsapp-ch"><span class="cch-icon">💬</span><div class="cch-text"><div class="cch-label">WhatsApp — Fastest</div><div class="cch-sub">+65 9386 0466</div></div></a><a href="contact.html#contact-form" class="contact-ch-link"><span class="cch-icon">📋</span><div class="cch-text"><div class="cch-label">Contact Form</div><div class="cch-sub">1 business day</div></div></a><a href="contact.html#callback" class="contact-ch-link"><span class="cch-icon">📞</span><div class="cch-text"><div class="cch-label">Request Callback</div><div class="cch-sub">+65 6286 4796</div></div></a></div><div class="contact-hours">🕐 Mon–Fri 8:00–17:00 · Sat by appt</div></div>
+      <div class="mega-menu mega-menu-contact"><div class="mega-col-label" style="margin-bottom:10px">Get In Touch</div><div class="contact-channel-links"><a href="https://wa.me/6593860466" class="contact-ch-link whatsapp-ch"><span class="cch-icon">ðŸ’¬</span><div class="cch-text"><div class="cch-label">WhatsApp â€” Fastest</div><div class="cch-sub">+65 9386 0466</div></div></a><a href="contact.html#contact-form" class="contact-ch-link"><span class="cch-icon">ðŸ“‹</span><div class="cch-text"><div class="cch-label">Contact Form</div><div class="cch-sub">1 business day</div></div></a><a href="contact.html#callback" class="contact-ch-link"><span class="cch-icon">ðŸ“ž</span><div class="cch-text"><div class="cch-label">Request Callback</div><div class="cch-sub">+65 6286 4796</div></div></a></div><div class="contact-hours">ðŸ• Monâ€“Fri 8:00â€“17:00 Â· Sat by appt</div></div>
+    </li>
+      <li class="nav-item">
+      <a href="#" class="nav-link" aria-label="Search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </a>
     </li>
   </ul>
   <a href="https://wa.me/6593860466" class="nav-cta-btn">WhatsApp Us</a>
-  <button class="mobile-toggle" onclick="toggleMobileMenu()">☰</button>
+  <button class="mobile-toggle" onclick="toggleMobileMenu()">â˜°</button>
 </div>
 <div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-menu-item" onclick="toggleSubmenu('solSub')">Solutions ▾<div class="mobile-submenu" id="solSub"><a href="solutions-hub.html"><strong>→ View All Solutions</strong></a><a href="residential.html">🏠 Private Homes</a><a href="condominiums.html">🏘️ Condominiums</a><a href="commercial.html">🏪 Commercial</a><a href="institutions.html">🏫 Institutions</a><a href="industrial.html">🏭 Industrial</a></div></div>
-  <div class="mobile-menu-item" onclick="toggleSubmenu('techSub')">Technology ▾<div class="mobile-submenu" id="techSub"><a href="technology.html"><strong>→ View All Technology</strong></a><a href="surveillance-systems.html">📹 Surveillance</a><a href="people-access.html">🚪 People Access</a><a href="vehicle-access.html">🚗 Vehicle Access</a><a href="platform-integration.html">📊 Platform</a><a href="brands.html">🏷️ All 20 Brands</a></div></div>
-  <div class="mobile-menu-item" onclick="toggleSubmenu('portSub')">Portfolio ▾<div class="mobile-submenu" id="portSub"><a href="portfolio.html"><strong>→ All Projects</strong></a><a href="portfolio-lviv.html">The L'viv</a><a href="portfolio-scape.html">SCAPE</a><a href="portfolio-sta.html">STA</a><a href="portfolio-cyrus.html">Cyrus Tech</a></div></div>
-  <div class="mobile-menu-item" onclick="toggleSubmenu('resSub')">Resources ▾<div class="mobile-submenu" id="resSub"><a href="resources.html"><strong>→ All Resources</strong></a><a href="resources-cctv-guide.html">CCTV Guide</a><a href="resources-troubleshoot.html">Troubleshooting</a><a href="resources-faq.html">FAQs</a></div></div>
-  <div class="mobile-menu-item" onclick="toggleSubmenu('insSub')">Insights ▾<div class="mobile-submenu" id="insSub"><a href="insights.html"><strong>→ All Articles</strong></a><a href="insights.html?cat=planning">Security Planning</a><a href="insights.html?cat=technology">Technology</a></div></div>
-  <div class="mobile-menu-item" onclick="toggleSubmenu('abtSub')">About ▾<div class="mobile-submenu" id="abtSub"><a href="about.html"><strong>→ About Securevision</strong></a><a href="about.html#founder">Founder's Story</a><a href="awards-certifications.html">Awards</a></div></div>
-  <div class="mobile-menu-item" onclick="toggleSubmenu('conSub')">Contact ▾<div class="mobile-submenu" id="conSub"><a href="https://wa.me/6593860466"><strong>💬 WhatsApp</strong></a><a href="contact.html#contact-form">Contact Form</a><a href="contact.html">Office &amp; Hours</a></div></div>
+  <div class="mobile-menu-item" onclick="toggleSubmenu('solSub')">Solutions â–¾<div class="mobile-submenu" id="solSub"><a href="solutions-hub.html"><strong>â†’ View All Solutions</strong></a><a href="residential.html">ðŸ  Private Homes</a><a href="condominiums.html">ðŸ˜ï¸ Condominiums</a><a href="commercial.html">ðŸª Commercial</a><a href="institutions.html">ðŸ« Institutions</a><a href="industrial.html">ðŸ­ Industrial</a></div></div>
+  <div class="mobile-menu-item" onclick="toggleSubmenu('techSub')">Technology â–¾<div class="mobile-submenu" id="techSub"><a href="technology.html"><strong>â†’ View All Technology</strong></a><a href="surveillance-systems.html">ðŸ“¹ Surveillance</a><a href="people-access.html">ðŸšª People Access</a><a href="vehicle-access.html">ðŸš— Vehicle Access</a><a href="platform-integration.html">ðŸ“Š Platform</a><a href="brands.html">ðŸ·ï¸ All 20 Brands</a></div></div>
+  <div class="mobile-menu-item" onclick="toggleSubmenu('portSub')">Portfolio â–¾<div class="mobile-submenu" id="portSub"><a href="portfolio.html"><strong>â†’ All Projects</strong></a><a href="portfolio-lviv.html">The L'viv</a><a href="portfolio-scape.html">SCAPE</a><a href="portfolio-sta.html">STA</a><a href="portfolio-cyrus.html">Cyrus Tech</a></div></div>
+  <div class="mobile-menu-item" onclick="toggleSubmenu('resSub')">Resources â–¾<div class="mobile-submenu" id="resSub"><a href="resources.html"><strong>â†’ All Resources</strong></a><a href="resources-cctv-guide.html">CCTV Guide</a><a href="resources-troubleshoot.html">Troubleshooting</a><a href="resources-faq.html">FAQs</a></div></div>
+  <div class="mobile-menu-item" onclick="toggleSubmenu('insSub')">Insights â–¾<div class="mobile-submenu" id="insSub"><a href="insights.html"><strong>â†’ All Articles</strong></a><a href="insights.html?cat=planning">Security Planning</a><a href="insights.html?cat=technology">Technology</a></div></div>
+  <div class="mobile-menu-item" onclick="toggleSubmenu('abtSub')">About â–¾<div class="mobile-submenu" id="abtSub"><a href="about.html"><strong>â†’ About Securevision</strong></a><a href="about.html#founder">Founder's Story</a><a href="awards-certifications.html">Awards</a></div></div>
+  <div class="mobile-menu-item" onclick="toggleSubmenu('conSub')">Contact â–¾<div class="mobile-submenu" id="conSub"><a href="https://wa.me/6593860466"><strong>ðŸ’¬ WhatsApp</strong></a><a href="contact.html#contact-form">Contact Form</a><a href="contact.html">Office &amp; Hours</a></div></div>
 </div>
 </nav>
 
@@ -350,17 +369,17 @@ a.mobile-menu-item:hover{color:#fff}
 <section id="hero">
   <div class="container">
     <div class="hero-inner">
-      <span class="eyebrow eyebrow-light">Products · Vehicle Access</span>
+      <span class="eyebrow eyebrow-light">Products Â· Vehicle Access</span>
       <h1>Vehicle Access Systems</h1>
-      <p class="hero-lead">ANPR-enabled, barrier-integrated vehicle management from entry to exit — built for condominiums, commercial buildings, logistics hubs, and gated developments across Singapore.</p>
+      <p class="hero-lead">ANPR-enabled, barrier-integrated vehicle management from entry to exit â€” built for condominiums, commercial buildings, logistics hubs, and gated developments across Singapore.</p>
 
       <div class="hero-tags">
-        <span class="hero-tag">🚧 Boom Gates</span>
-        <span class="hero-tag">🔍 ANPR / LPR</span>
-        <span class="hero-tag">⛔ Road Blockers</span>
-        <span class="hero-tag">📻 UHF Long Range</span>
-        <span class="hero-tag">🅿️ Parking Management</span>
-        <span class="hero-tag">📞 GantryGo™ Intercom</span>
+        <span class="hero-tag">ðŸš§ Boom Gates</span>
+        <span class="hero-tag">ðŸ” ANPR / LPR</span>
+        <span class="hero-tag">â›” Road Blockers</span>
+        <span class="hero-tag">ðŸ“» UHF Long Range</span>
+        <span class="hero-tag">ðŸ…¿ï¸ Parking Management</span>
+        <span class="hero-tag">ðŸ“ž GantryGoâ„¢ Intercom</span>
       </div>
       <div class="hero-btns">
         <a href="#categories" class="btn btn-accent">View Vehicle Systems</a>
@@ -377,7 +396,7 @@ a.mobile-menu-item:hover{color:#fff}
       <div class="overview-text">
         <span class="eyebrow">Why It Matters</span>
         <h2>Vehicle Access Done Right</h2>
-        <p>A boom gate by itself isn't a vehicle access system. When ANPR reads the plate, the barrier opens automatically, and the event is logged with a camera snapshot — that's a vehicle access system.</p>
+        <p>A boom gate by itself isn't a vehicle access system. When ANPR reads the plate, the barrier opens automatically, and the event is logged with a camera snapshot â€” that's a vehicle access system.</p>
         <p>Securevision designs vehicle access infrastructure that eliminates manual guard intervention, prevents tailgating, and gives management a complete log of every vehicle movement in and out of the property.</p>
         <ul class="check-list">
           <li>ANPR recognition accuracy 99%+ in Singapore conditions</li>
@@ -385,7 +404,7 @@ a.mobile-menu-item:hover{color:#fff}
           <li>Tailgating detection via intercom, sensors, and camera integration</li>
           <li>Complete vehicle movement log for audit and investigation</li>
           <li>Integration with people access for linked resident profiles</li>
-          <li>GantryGo™ intercom for visitor authorisation and emergency override</li>
+          <li>GantryGoâ„¢ intercom for visitor authorisation and emergency override</li>
         </ul>
       </div>
       <div class="spec-card">
@@ -396,7 +415,7 @@ a.mobile-menu-item:hover{color:#fff}
         <div class="spec-row"><span class="spec-label">Integration</span><span class="spec-value">CCTV, Access, Parking</span></div>
         <div class="spec-row"><span class="spec-label">Event Logging</span><span class="spec-value">Plate + timestamp + snapshot</span></div>
         <div class="spec-row"><span class="spec-label">Security Rating</span><span class="spec-value">Up to hostile vehicle</span></div>
-        <div class="spec-row"><span class="spec-label">Intercom</span><span class="spec-value">GantryGo™ 2-way video</span></div>
+        <div class="spec-row"><span class="spec-label">Intercom</span><span class="spec-value">GantryGoâ„¢ 2-way video</span></div>
         <div class="spec-row"><span class="spec-label">Remote Access</span><span class="spec-value">Web / Mobile management</span></div>
       </div>
     </div>
@@ -409,11 +428,11 @@ a.mobile-menu-item:hover{color:#fff}
     <div class="section-header">
       <span class="eyebrow">Vehicle Systems</span>
       <h2>From Boom Gates to Road Blockers</h2>
-      <p>We specify the right barrier technology for each entry point — balancing throughput, security level, and operational requirements.</p>
+      <p>We specify the right barrier technology for each entry point â€” balancing throughput, security level, and operational requirements.</p>
     </div>
     <div class="cat-grid">
       <div class="cat-card">
-        <div class="cat-icon">🚧</div>
+        <div class="cat-icon">ðŸš§</div>
         <h3>Boom Gates & Barriers</h3>
         <p>High-cycle boom gates for residential and commercial car parks. Rapid open/close times reduce queue buildup at peak hours.</p>
         <ul class="cat-specs">
@@ -425,7 +444,7 @@ a.mobile-menu-item:hover{color:#fff}
         </ul>
       </div>
       <div class="cat-card">
-        <div class="cat-icon">🔍</div>
+        <div class="cat-icon">ðŸ”</div>
         <h3>ANPR / LPR Systems</h3>
         <p>Automatic Number Plate Recognition with AI-powered character detection. Handles partial plates, dirty plates, and varied lighting conditions.</p>
         <ul class="cat-specs">
@@ -437,7 +456,7 @@ a.mobile-menu-item:hover{color:#fff}
         </ul>
       </div>
       <div class="cat-card">
-        <div class="cat-icon">📻</div>
+        <div class="cat-icon">ðŸ“»</div>
         <h3>UHF Long-Range Systems</h3>
         <p>Radio-frequency tags on windscreens for seamless resident access without stopping or winding down windows. Ideal for condominiums and gated housing.</p>
         <ul class="cat-specs">
@@ -449,7 +468,7 @@ a.mobile-menu-item:hover{color:#fff}
         </ul>
       </div>
       <div class="cat-card">
-        <div class="cat-icon">⛔</div>
+        <div class="cat-icon">â›”</div>
         <h3>Road Blockers & Bollards</h3>
         <p>High-security hostile vehicle mitigation for government, institutional, and critical infrastructure sites. Crash-rated to PAS 68/IWA 14.</p>
         <ul class="cat-specs">
@@ -461,7 +480,7 @@ a.mobile-menu-item:hover{color:#fff}
         </ul>
       </div>
       <div class="cat-card">
-        <div class="cat-icon">🅿️</div>
+        <div class="cat-icon">ðŸ…¿ï¸</div>
         <h3>Parking Management Systems</h3>
         <p>Integrated parking guidance, bay counting, and payment management. Real-time availability display reduces internal traffic and frustration.</p>
         <ul class="cat-specs">
@@ -473,9 +492,9 @@ a.mobile-menu-item:hover{color:#fff}
         </ul>
       </div>
       <div class="cat-card">
-        <div class="cat-icon">📱</div>
+        <div class="cat-icon">ðŸ“±</div>
         <h3>Vehicle Access Software</h3>
-        <p>Centralised vehicle access management — whitelist management, visitor pre-booking, and fleet reporting all in one platform.</p>
+        <p>Centralised vehicle access management â€” whitelist management, visitor pre-booking, and fleet reporting all in one platform.</p>
         <ul class="cat-specs">
           <li>Web-based admin portal</li>
           <li>Visitor pre-registration & QR</li>
@@ -493,28 +512,36 @@ a.mobile-menu-item:hover{color:#fff}
   <div class="container">
     <div class="gantrygo-grid">
       <div class="gantrygo-badge">
-        <div class="gantrygo-name">Gantry<span>Go</span>™</div>
+        <div class="gantrygo-name">Gantry<span>Go</span>â„¢</div>
         <div class="gantrygo-sub">Securevision Proprietary System</div>
         <div class="gantrygo-features">
-          <div class="gantrygo-feature">📞 2-way video intercom at gantry</div>
-          <div class="gantrygo-feature">📱 Mobile app authorisation by resident</div>
-          <div class="gantrygo-feature">🔓 Remote barrier release from phone</div>
-          <div class="gantrygo-feature">📸 Snapshot on every visitor call</div>
-          <div class="gantrygo-feature">📋 Full visitor log with timestamps</div>
+          <div class="gantrygo-feature">ðŸ“ž 2-way video intercom at gantry</div>
+          <div class="gantrygo-feature">ðŸ“± Mobile app authorisation by resident</div>
+          <div class="gantrygo-feature">ðŸ”“ Remote barrier release from phone</div>
+          <div class="gantrygo-feature">ðŸ“¸ Snapshot on every visitor call</div>
+          <div class="gantrygo-feature">ðŸ“‹ Full visitor log with timestamps</div>
         </div>
       </div>
       <div class="gantrygo-content">
         <span class="eyebrow">Securevision Proprietary</span>
-        <h2>GantryGo™ Visitor Intercom System</h2>
-        <p>GantryGo™ is Securevision's purpose-built gantry intercom platform — designed specifically for the visitor management challenges unique to Singapore condominiums and gated properties.</p>
-        <p>When a visitor arrives, they call the resident via the gantry intercom. The resident sees a live video feed and can open the barrier directly from their smartphone — from anywhere. Every visitor call is logged with a photo and timestamp.</p>
+        <h2>GantryGoâ„¢ Visitor Intercom System</h2>
+        <p>GantryGoâ„¢ is Securevision's purpose-built gantry intercom platform â€” designed specifically for the visitor management challenges unique to Singapore condominiums and gated properties.</p>
+        <p>When a visitor arrives, they call the resident via the gantry intercom. The resident sees a live video feed and can open the barrier directly from their smartphone â€” from anywhere. Every visitor call is logged with a photo and timestamp.</p>
         <ul class="bullet-list">
           <li><span class="bullet-dot"></span>No security guard intervention required for resident-authorised visitors</li>
           <li><span class="bullet-dot"></span>Pre-booking allows automatic barrier release for expected visitors</li>
           <li><span class="bullet-dot"></span>Management override for emergencies and contractor access</li>
           <li><span class="bullet-dot"></span>Integrates with ANPR for combined plate + intercom verification</li>
-        </ul>
-        <a href="https://wa.me/6593860466" class="btn btn-accent">Ask About GantryGo™</a>
+            <li class="nav-item">
+      <a href="#" class="nav-link" aria-label="Search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </a>
+    </li>
+  </ul>
+        <a href="https://wa.me/6593860466" class="btn btn-accent">Ask About GantryGoâ„¢</a>
       </div>
     </div>
   </div>
@@ -531,12 +558,12 @@ a.mobile-menu-item:hover{color:#fff}
       <div class="use-card">
         <div class="use-badge">Condominium</div>
         <h3>Resident & Visitor Car Park</h3>
-        <p>UHF tags for seamless resident access, ANPR for visitor management, GantryGo™ intercom for resident-authorised entry. Complete movement log for MCST reporting.</p>
+        <p>UHF tags for seamless resident access, ANPR for visitor management, GantryGoâ„¢ intercom for resident-authorised entry. Complete movement log for MCST reporting.</p>
       </div>
       <div class="use-card">
         <div class="use-badge">Commercial</div>
         <h3>Office Building Car Park</h3>
-        <p>ANPR-integrated boom gates with cashless payment. Tenant allocation management — reserved bays, visitor bays, and loading bay time limits all configured centrally.</p>
+        <p>ANPR-integrated boom gates with cashless payment. Tenant allocation management â€” reserved bays, visitor bays, and loading bay time limits all configured centrally.</p>
       </div>
       <div class="use-case-card">
         <div class="use-badge">Industrial</div>
@@ -601,10 +628,10 @@ a.mobile-menu-item:hover{color:#fff}
     <span style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent,#dd6b20);margin-bottom:12px;display:block;">Brands We Install</span>
     <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:40px;">
       <div>
-        <h2 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:clamp(22px,3vw,32px);margin-bottom:10px;">Brands We Install — Gates &amp; Barriers</h2>
-        <p style="font-size:15px;color:#5F6368;max-width:660px;line-height:1.7;margin:0;">We carry Italy's leading gate automation brand alongside competitive value alternatives — specified by motor type, gate weight, and duty cycle requirements.</p>
+        <h2 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:clamp(22px,3vw,32px);margin-bottom:10px;">Brands We Install â€” Gates &amp; Barriers</h2>
+        <p style="font-size:15px;color:#5F6368;max-width:660px;line-height:1.7;margin:0;">We carry Italy's leading gate automation brand alongside competitive value alternatives â€” specified by motor type, gate weight, and duty cycle requirements.</p>
       </div>
-      <a href="brands.html" style="display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:8px;background:var(--accent,#dd6b20);color:#fff;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;text-decoration:none;white-space:nowrap;flex-shrink:0;">View All 20 Brands →</a>
+      <a href="brands.html" style="display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:8px;background:var(--accent,#dd6b20);color:#fff;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;text-decoration:none;white-space:nowrap;flex-shrink:0;">View All 20 Brands â†’</a>
     </div>
     <style>
       .bwi-group { margin-bottom: 36px; }
@@ -647,25 +674,25 @@ a.mobile-menu-item:hover{color:#fff}
     
       <div class="bwi-group">
         <div class="bwi-group-header">
-          <span class="bwi-group-icon">🚧</span>
+          <span class="bwi-group-icon">ðŸš§</span>
           <span class="bwi-group-title">Gate Motors & Barriers</span>
           <span class="bwi-group-bar" style="background:#dd6b20;"></span>
         </div>
         <div class="bwi-grid">
           <a href="faac-singapore.html" class="bwi-card">
             <div class="bwi-name">FAAC Group</div>
-            <div class="bwi-desc">Italian #1 · 50yr heritage · authorised</div>
-            <div class="bwi-tier" style="background:#2b6cb0;">Mid–Premium</div>
+            <div class="bwi-desc">Italian #1 Â· 50yr heritage Â· authorised</div>
+            <div class="bwi-tier" style="background:#2b6cb0;">Midâ€“Premium</div>
           </a>
           <a href="mag-gates-singapore.html" class="bwi-card">
             <div class="bwi-name">MAG</div>
             <div class="bwi-desc">Reliable residential value</div>
-            <div class="bwi-tier" style="background:#38a169;">Budget–Mid</div>
+            <div class="bwi-tier" style="background:#38a169;">Budgetâ€“Mid</div>
           </a>
           <a href="dormer-singapore.html" class="bwi-card">
             <div class="bwi-name">Dormer</div>
             <div class="bwi-desc">Strong Singapore residential base</div>
-            <div class="bwi-tier" style="background:#38a169;">Budget–Mid</div>
+            <div class="bwi-tier" style="background:#38a169;">Budgetâ€“Mid</div>
           </a>
         </div>
       </div>
@@ -678,9 +705,9 @@ a.mobile-menu-item:hover{color:#fff}
     <div class="cta-inner">
       <span class="eyebrow eyebrow-light">Get Started</span>
       <h2>Design Your Vehicle Access System</h2>
-      <p>Tell us about your property, entry points, and visitor volumes — we'll design the right system architecture and provide a detailed proposal.</p>
+      <p>Tell us about your property, entry points, and visitor volumes â€” we'll design the right system architecture and provide a detailed proposal.</p>
       <div class="cta-btns">
-        <a href="https://wa.me/6593860466" class="btn btn-whatsapp">💬 WhatsApp a Specialist</a>
+        <a href="https://wa.me/6593860466" class="btn btn-whatsapp">ðŸ’¬ WhatsApp a Specialist</a>
         <a href="contact.html" class="btn btn-outline-white">Book a Site Survey</a>
       </div>
     </div>
@@ -689,5 +716,5 @@ a.mobile-menu-item:hover{color:#fff}
 
 <footer>
   <div class="footer-bottom">
-    <p>© 2025 Securevision Pte Ltd &nbsp;|&nbsp; Police License L/PS/000267/2023P &nbsp;|&nbsp; <a href="technology.html" style="color:rgba(255,255,255,0.4); text-decoration:none;">← Back to Products</a></p>
+    <p>Â© 2025 Securevision Pte Ltd &nbsp;|&nbsp; Police License L/PS/000267/2023P &nbsp;|&nbsp; <a href="technology.html" style="color:rgba(255,255,255,0.4); text-decoration:none;">â† Back to Products</a></p>
     <p>+65 9386 0466 &nbsp;|&nbsp; <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-c
