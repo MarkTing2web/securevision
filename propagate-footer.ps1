@@ -1,4 +1,5 @@
 $directoryPath = "c:\Users\ler\OneDrive - Securevision Pte Ltd\Web2026"
+$utf8NoBom = New-Object System.Text.UTF8Encoding $false
 
 $newFooter = @"
     <footer class="site-footer">
@@ -91,19 +92,18 @@ $modifiedCount = 0
 
 foreach ($file in $files) {
     if ($file.Name -match "test-.*.html") { continue }
-    if ($file.Name -match "index-fixed.html") { continue }
     
-    $content = Get-Content -Path $file.FullName -Raw
+    # Use ReadAllText for reliable UTF-8
+    $content = [System.IO.File]::ReadAllText($file.FullName, $utf8NoBom)
     $originalContent = $content
 
-    $content = $content -replace '(?s)<footer class="site-footer">.*?</footer>', $newFooter
+    $content = $content -replace '(?s)<footer.*?>.*?</footer>', $newFooter
 
     if ($originalContent -ne $content) {
-        $utf8NoBom = New-Object System.Text.UTF8Encoding $false
         [System.IO.File]::WriteAllText($file.FullName, $content, $utf8NoBom)
         $modifiedCount++
         Write-Host "Updated $($file.Name)"
     }
 }
 
-Write-Host "`nTask Complete. Modified $modifiedCount files."
+Write-Host "`nFooter propagation complete. Modified $modifiedCount files."

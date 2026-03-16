@@ -1,4 +1,9 @@
 $directoryPath = "c:\Users\ler\OneDrive - Securevision Pte Ltd\Web2026"
+$utf8WithBom = New-Object System.Text.UTF8Encoding $true
+$utf8NoBom = New-Object System.Text.UTF8Encoding $false
+
+$headerScriptContent = @'
+$directoryPath = "c:\Users\ler\OneDrive - Securevision Pte Ltd\Web2026"
 $utf8NoBom = New-Object System.Text.UTF8Encoding $false
 
 $newCss = @"
@@ -119,7 +124,7 @@ a.mobile-menu-item:hover{color:#fff}
 </style>
 "@
 
-$newNavBlock = @"
+$newNav = @"
 <nav class="main-nav">
 <div class="nav-container">
   <a href="index.html" class="nav-logo-link" aria-label="Securevision" style="gap: 8px;">
@@ -203,28 +208,47 @@ $newNavBlock = @"
 </nav>
 "@
 
-$files = Get-ChildItem -Path $directoryPath -Filter *.html
+$js = @"
+<script>
+function toggleMobileMenu(){document.getElementById('mobileMenu').classList.toggle('active')}
+function toggleSubmenu(id){const s=document.getElementById(id);s.style.display=(s.style.display==='block')?'none':'block'}
+</script>
+"@
 
-$modifiedCount = 0
+$files = Get-ChildItem -Path $directoryPath -Filter *.html
 
 foreach ($file in $files) {
     if ($file.Name -match "test-.*.html") { continue }
     
-    # Use [System.IO.File]::ReadAllText for reliable UTF-8 reading
     $content = [System.IO.File]::ReadAllText($file.FullName, $utf8NoBom)
     $originalContent = $content
 
-    # 1. Replace the entire sv-nav-css block
-    $content = $content -replace '(?s)<style id="sv-nav-css">.*?</style>', $newCss
+    # Replace CSS
+    if ($content -like "*<style id=`"sv-nav-css`">*") {
+        $content = $content -replace '(?s)<style id="sv-nav-css">.*?</style>', $newCss
+    } elseif ($content -like "*</head>*") {
+        $content = $content -replace '</head>', "$newCss`n</head>"
+    }
 
-    # 2. Replace the entire nav block
-    $content = $content -replace '(?s)<nav class="main-nav">.*?</nav>', $newNavBlock
+    # Replace Nav
+    if ($content -like "*<nav class=`"main-nav`">*") {
+        $content = $content -replace '(?s)<nav class="main-nav">.*?</nav>', $newNav
+    } elseif ($content -like "*<body*>*") {
+        $content = $content -replace '(<body.*?>)', "$1`n$newNav"
+    }
+
+    # Ensure JS is present
+    if ($content -notlike "*toggleMobileMenu()*") {
+        $content = $content -replace '</body>', "$js`n</body>"
+    }
 
     if ($originalContent -ne $content) {
         [System.IO.File]::WriteAllText($file.FullName, $content, $utf8NoBom)
-        $modifiedCount++
         Write-Host "Updated $($file.Name)"
     }
 }
+Write-Host "Header propagation complete."
+'@
 
-Write-Host "`nHeader propagation complete. Modified $modifiedCount files."
+# Save the script with BOM so PS 5.1 reads it correctly
+[System.IO.File]::WriteAllText("c:\Users\ler\OneDrive - Securevision Pte Ltd\Web2026\propagate_header_bom.ps1", $headerScriptContent, $utf8WithBom)

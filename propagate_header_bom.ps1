@@ -1,4 +1,4 @@
-$directoryPath = "c:\Users\ler\OneDrive - Securevision Pte Ltd\Web2026"
+﻿$directoryPath = "c:\Users\ler\OneDrive - Securevision Pte Ltd\Web2026"
 $utf8NoBom = New-Object System.Text.UTF8Encoding $false
 
 $newCss = @"
@@ -11,7 +11,7 @@ $newCss = @"
 .nav-item{position:static}
 .nav-link{color:rgba(255,255,255,.8);text-decoration:none;font-size:14px;font-weight:500;display:flex;align-items:center;height:68px;padding:0 13px;white-space:nowrap;transition:.2s}
 .nav-link:hover,.nav-link.active{color:#fff}
-.has-dropdown::after{content:" ▾";font-size:9px;opacity:.5;margin-left:4px}
+.has-dropdown::after{content:" â–¾";font-size:9px;opacity:.5;margin-left:4px}
 .nav-right{display:flex;align-items:center;gap:16px}
 .nav-cta-btn{background:#0056b3;color:#fff;padding:9px 16px;border-radius:6px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;text-decoration:none;white-space:nowrap;transition:.2s}
 .nav-cta-btn:hover{background:#003d82}
@@ -119,7 +119,7 @@ a.mobile-menu-item:hover{color:#fff}
 </style>
 "@
 
-$newNavBlock = @"
+$newNav = @"
 <nav class="main-nav">
 <div class="nav-container">
   <a href="index.html" class="nav-logo-link" aria-label="Securevision" style="gap: 8px;">
@@ -129,36 +129,36 @@ $newNavBlock = @"
   <ul class="nav-menu">
     <li class="nav-item"><a href="solutions-hub.html" class="nav-link has-dropdown">Solutions</a>
       <div class="mega-menu mega-menu-solutions">
-        <div class="mega-guidance"><div class="mega-col-label">Need Help Choosing?</div><h4>Not Sure Which Solution Fits?</h4><p>Every property type has unique risks.</p><a href="solutions-hub.html" class="view-all-link">→ View All Solutions</a><div class="mega-trust"><div class="trust-item">✓ Police Licensed L/PS/000267/2023P</div><div class="trust-item">✓ 19+ Years · 2,000+ Sites</div><div class="trust-item">✓ bizSAFE Level 4 · BCA Registered</div></div></div>
-        <div class="mega-links-col"><div class="mega-col-label">By Property Type</div><a href="residential.html" class="solution-link"><strong>🏠 Private Homes</strong><small>Landed properties, bungalows, terraces</small></a><a href="condominiums.html" class="solution-link"><strong>🏘️ Condominiums</strong><small>MCSTs, managed estates, apartments</small></a><a href="commercial.html" class="solution-link"><strong>🏬 Commercial &amp; Retail</strong><small>Shops, offices, hotels</small></a><a href="institutions.html" class="solution-link"><strong>🏫 Institutions</strong><small>Schools, healthcare, government</small></a><a href="industrial.html" class="solution-link"><strong>🏭 Factories &amp; Logistics</strong><small>Factories, warehouses, logistics</small></a></div>
+        <div class="mega-guidance"><div class="mega-col-label">Need Help Choosing?</div><h4>Not Sure Which Solution Fits?</h4><p>Every property type has unique risks.</p><a href="solutions-hub.html" class="view-all-link">â†’ View All Solutions</a><div class="mega-trust"><div class="trust-item">âœ“ Police Licensed L/PS/000267/2023P</div><div class="trust-item">âœ“ 19+ Years Â· 2,000+ Sites</div><div class="trust-item">âœ“ bizSAFE Level 4 Â· BCA Registered</div></div></div>
+        <div class="mega-links-col"><div class="mega-col-label">By Property Type</div><a href="residential.html" class="solution-link"><strong>ðŸ  Private Homes</strong><small>Landed properties, bungalows, terraces</small></a><a href="condominiums.html" class="solution-link"><strong>ðŸ˜ï¸ Condominiums</strong><small>MCSTs, managed estates, apartments</small></a><a href="commercial.html" class="solution-link"><strong>ðŸ¬ Commercial &amp; Retail</strong><small>Shops, offices, hotels</small></a><a href="institutions.html" class="solution-link"><strong>ðŸ« Institutions</strong><small>Schools, healthcare, government</small></a><a href="industrial.html" class="solution-link"><strong>ðŸ­ Factories &amp; Logistics</strong><small>Factories, warehouses, logistics</small></a></div>
       </div>
     </li>
     <li class="nav-item"><a href="technology.html" class="nav-link has-dropdown">Technology</a>
       <div class="mega-menu mega-menu-technology">
-        <div class="mega-guidance"><div class="mega-col-label">Our Systems</div><h4>Systems &amp; Technology</h4><p>Four subsystem groups on the SECURE™ framework.</p><a href="technology.html" class="view-all-link">→ View All Technology</a><div class="mega-trust"><div class="trust-item">✓ SECURE™ Integration</div><div class="trust-item">✓ VESTA™ Enterprise Platform</div><div class="trust-item">✓ GantryGo™ Vehicle Intercom</div></div></div>
-        <div class="mega-links-col"><div class="mega-col-label">By System Type</div><a href="surveillance-systems.html" class="product-link"><span class="pl-dot" style="background:#2b6cb0"></span><div><strong>📷 Surveillance &amp; Detection</strong><small>IP cameras, AI analytics, NVR, alarms</small></div></a><a href="people-access.html" class="product-link"><span class="pl-dot" style="background:#319795"></span><div><strong>🚪 People Access Systems</strong><small>Biometrics, visitor management, intercom</small></div></a><a href="vehicle-access.html" class="product-link"><span class="pl-dot" style="background:#dd6b20"></span><div><strong>🚗 Vehicle Access Systems</strong><small>Boom gates, ANPR, GantryGo™</small></div></a><a href="platform-integration.html" class="product-link"><span class="pl-dot" style="background:#38a169"></span><div><strong>📊 Platform &amp; Integration</strong><small>VESTA™ dashboard, multi-site</small></div></a></div>
-        <div class="mega-brands-col"><div class="mega-col-label">Brands We Represent</div><div class="brand-grid"><a href="hikvision-singapore.html">Hikvision</a><a href="hanwha-samsung-singapore.html">Hanwha</a><a href="uniview-singapore.html">Uniview</a><a href="milesight-singapore.html">Milesight</a><a href="ajax-alarm-singapore.html">AJAX</a><a href="risco-alarm-singapore.html">RISCO</a><a href="paradox-alarm-singapore.html">Paradox</a><a href="dsc-alarm-singapore.html">DSC</a><a href="zkteco-singapore.html">ZKTeco</a><a href="suprema-singapore.html">Suprema</a><a href="hid-singapore.html">HID</a><a href="entrypass-singapore.html">EntryPass</a><a href="akuvox-singapore.html">Akuvox</a><a href="aiphone-singapore.html">Aiphone</a><a href="faac-singapore.html">FAAC</a><a href="mag-gates-singapore.html">MAG</a></div><a href="brands.html" class="view-all-link" style="margin-top:2px;font-size:12px">→ All 20 Brands</a></div>
+        <div class="mega-guidance"><div class="mega-col-label">Our Systems</div><h4>Systems &amp; Technology</h4><p>Four subsystem groups on the SECUREâ„¢ framework.</p><a href="technology.html" class="view-all-link">â†’ View All Technology</a><div class="mega-trust"><div class="trust-item">âœ“ SECUREâ„¢ Integration</div><div class="trust-item">âœ“ VESTAâ„¢ Enterprise Platform</div><div class="trust-item">âœ“ GantryGoâ„¢ Vehicle Intercom</div></div></div>
+        <div class="mega-links-col"><div class="mega-col-label">By System Type</div><a href="surveillance-systems.html" class="product-link"><span class="pl-dot" style="background:#2b6cb0"></span><div><strong>ðŸ“· Surveillance &amp; Detection</strong><small>IP cameras, AI analytics, NVR, alarms</small></div></a><a href="people-access.html" class="product-link"><span class="pl-dot" style="background:#319795"></span><div><strong>ðŸšª People Access Systems</strong><small>Biometrics, visitor management, intercom</small></div></a><a href="vehicle-access.html" class="product-link"><span class="pl-dot" style="background:#dd6b20"></span><div><strong>ðŸš— Vehicle Access Systems</strong><small>Boom gates, ANPR, GantryGoâ„¢</small></div></a><a href="platform-integration.html" class="product-link"><span class="pl-dot" style="background:#38a169"></span><div><strong>ðŸ“Š Platform &amp; Integration</strong><small>VESTAâ„¢ dashboard, multi-site</small></div></a></div>
+        <div class="mega-brands-col"><div class="mega-col-label">Brands We Represent</div><div class="brand-grid"><a href="hikvision-singapore.html">Hikvision</a><a href="hanwha-samsung-singapore.html">Hanwha</a><a href="uniview-singapore.html">Uniview</a><a href="milesight-singapore.html">Milesight</a><a href="ajax-alarm-singapore.html">AJAX</a><a href="risco-alarm-singapore.html">RISCO</a><a href="paradox-alarm-singapore.html">Paradox</a><a href="dsc-alarm-singapore.html">DSC</a><a href="zkteco-singapore.html">ZKTeco</a><a href="suprema-singapore.html">Suprema</a><a href="hid-singapore.html">HID</a><a href="entrypass-singapore.html">EntryPass</a><a href="akuvox-singapore.html">Akuvox</a><a href="aiphone-singapore.html">Aiphone</a><a href="faac-singapore.html">FAAC</a><a href="mag-gates-singapore.html">MAG</a></div><a href="brands.html" class="view-all-link" style="margin-top:2px;font-size:12px">â†’ All 20 Brands</a></div>
       </div>
     </li>
     <li class="nav-item"><a href="portfolio.html" class="nav-link has-dropdown">Portfolio</a>
       <div class="mega-menu mega-menu-portfolio">
         <div class="mega-links-col"><div class="mega-col-label">By Property</div><a href="portfolio.html?filter=residential" class="port-link"><span class="port-dot" style="background:#38B000"></span>Private Homes</a><a href="portfolio.html?filter=condominium" class="port-link"><span class="port-dot" style="background:#4361EE"></span>Condominiums</a><a href="portfolio.html?filter=commercial" class="port-link"><span class="port-dot" style="background:#FF6D00"></span>Commercial</a><a href="portfolio.html?filter=institution" class="port-link"><span class="port-dot" style="background:#0056b3"></span>Institutions</a><a href="portfolio.html?filter=industrial" class="port-link"><span class="port-dot" style="background:#7209B7"></span>Industrial</a></div>
         <div class="mega-links-col"><div class="mega-col-label">By System</div><a href="portfolio.html?filter=surveillance" class="port-link"><span class="port-dot" style="background:#2b6cb0"></span>Surveillance</a><a href="portfolio.html?filter=people-access" class="port-link"><span class="port-dot" style="background:#319795"></span>People Access</a><a href="portfolio.html?filter=vehicle-access" class="port-link"><span class="port-dot" style="background:#dd6b20"></span>Vehicle Access</a><a href="portfolio.html?filter=platform" class="port-link"><span class="port-dot" style="background:#38a169"></span>Platform</a><a href="portfolio.html" class="port-link"><span class="port-dot" style="background:#888"></span>All Projects</a></div>
-        <div class="mega-links-col"><div class="mega-col-label">Featured</div><a href="portfolio-lviv.html" class="port-featured"><div class="pf-label">Condominium</div><div class="pf-title">The L'viv</div><div class="pf-meta">VESTA™ + GantryGo™</div></a><a href="portfolio-scape.html" class="port-featured"><div class="pf-label">Commercial</div><div class="pf-title">SCAPE</div><div class="pf-meta">200-camera AI system</div></a></div>
+        <div class="mega-links-col"><div class="mega-col-label">Featured</div><a href="portfolio-lviv.html" class="port-featured"><div class="pf-label">Condominium</div><div class="pf-title">The L'viv</div><div class="pf-meta">VESTAâ„¢ + GantryGoâ„¢</div></a><a href="portfolio-scape.html" class="port-featured"><div class="pf-label">Commercial</div><div class="pf-title">SCAPE</div><div class="pf-meta">200-camera AI system</div></a></div>
       </div>
     </li>
     <li class="nav-item"><a href="resources.html" class="nav-link has-dropdown">Resources</a>
       <div class="mega-menu mega-menu-resources">
-        <div class="mega-links-col"><div class="res-col-header"><span>🧮</span><h4>Planning Tools</h4></div><a href="resources.html" class="res-link">Security Calculator <span class="rl-soon">Soon</span></a><a href="resources.html" class="res-link">Risk Assessment <span class="rl-soon">Soon</span></a></div>
-        <div class="mega-links-col"><div class="res-col-header"><span>📚</span><h4>Guides</h4></div><a href="resources-cctv-guide.html" class="res-link">CCTV Buyer's Guide</a><a href="resources-access-control.html" class="res-link">Access Control</a></div>
-        <div class="mega-links-col"><div class="res-col-header"><span>🔧</span><h4>Support</h4></div><a href="resources-troubleshoot.html" class="res-link">Troubleshooting</a><a href="resources-faq.html" class="res-link">FAQs</a></div>
-        <div class="mega-links-col"><div class="res-col-header"><span>📥</span><h4>Downloads</h4></div><a href="resources.html" class="res-link">Spec Sheets <span class="rl-soon">Soon</span></a></div>
+        <div class="mega-links-col"><div class="res-col-header"><span>ðŸ§®</span><h4>Planning Tools</h4></div><a href="resources.html" class="res-link">Security Calculator <span class="rl-soon">Soon</span></a><a href="resources.html" class="res-link">Risk Assessment <span class="rl-soon">Soon</span></a></div>
+        <div class="mega-links-col"><div class="res-col-header"><span>ðŸ“š</span><h4>Guides</h4></div><a href="resources-cctv-guide.html" class="res-link">CCTV Buyer's Guide</a><a href="resources-access-control.html" class="res-link">Access Control</a></div>
+        <div class="mega-links-col"><div class="res-col-header"><span>ðŸ”§</span><h4>Support</h4></div><a href="resources-troubleshoot.html" class="res-link">Troubleshooting</a><a href="resources-faq.html" class="res-link">FAQs</a></div>
+        <div class="mega-links-col"><div class="res-col-header"><span>ðŸ“¥</span><h4>Downloads</h4></div><a href="resources.html" class="res-link">Spec Sheets <span class="rl-soon">Soon</span></a></div>
       </div>
     </li>
     <li class="nav-item"><a href="insights.html" class="nav-link has-dropdown">Insights</a>
       <div class="mega-menu mega-menu-insights">
-        <div class="mega-guidance"><div class="mega-col-label">Latest</div><a href="insights-integrated-systems.html" class="insights-featured"><span class="if-tag">Security Planning</span><div class="if-title">Why Integrated Systems Outperform Standalone</div><div class="if-meta">6 min read</div></a><a href="insights.html" class="view-all-link" style="margin-top:10px">→ All Articles</a></div>
-        <div class="mega-links-col"><div class="mega-col-label">By Topic</div><a href="insights.html?cat=planning" class="insights-cat"><span class="ic-icon">🏗️</span><div class="ic-text"><strong>Security Planning</strong><small>Property Managers</small></div></a><a href="insights.html?cat=technology" class="insights-cat"><span class="ic-icon">🤖</span><div class="ic-text"><strong>Technology</strong><small>AI, ANPR, biometrics</small></div></a><a href="insights.html?cat=industry" class="insights-cat"><span class="ic-icon">🇸🇬</span><div class="ic-text"><strong>SG Industry</strong><small>Regulations, trends</small></div></a></div>
+        <div class="mega-guidance"><div class="mega-col-label">Latest</div><a href="insights-integrated-systems.html" class="insights-featured"><span class="if-tag">Security Planning</span><div class="if-title">Why Integrated Systems Outperform Standalone</div><div class="if-meta">6 min read</div></a><a href="insights.html" class="view-all-link" style="margin-top:10px">â†’ All Articles</a></div>
+        <div class="mega-links-col"><div class="mega-col-label">By Topic</div><a href="insights.html?cat=planning" class="insights-cat"><span class="ic-icon">ðŸ—ï¸</span><div class="ic-text"><strong>Security Planning</strong><small>Property Managers</small></div></a><a href="insights.html?cat=technology" class="insights-cat"><span class="ic-icon">ðŸ¤–</span><div class="ic-text"><strong>Technology</strong><small>AI, ANPR, biometrics</small></div></a><a href="insights.html?cat=industry" class="insights-cat"><span class="ic-icon">ðŸ‡¸ðŸ‡¬</span><div class="ic-text"><strong>SG Industry</strong><small>Regulations, trends</small></div></a></div>
       </div>
     </li>
     <li class="nav-item"><a href="contact.html" class="nav-link has-dropdown">Contact</a>
@@ -166,17 +166,17 @@ $newNavBlock = @"
         <div class="mega-links-col">
           <div class="mega-col-label">About Securevision</div>
           <div class="about-preview-card">
-            <div class="apc-founder"><div class="apc-avatar">👤</div><div><div class="apc-name">Ler Wee Meng</div><div class="apc-title">Founder · NUS Eng + UOL Law</div></div></div>
+            <div class="apc-founder"><div class="apc-avatar">ðŸ‘¤</div><div><div class="apc-name">Ler Wee Meng</div><div class="apc-title">Founder Â· NUS Eng + UOL Law</div></div></div>
             <div class="apc-quote">Built on engineering. Backed by law. Since 2006.</div>
           </div>
-          <a href="about.html" class="about-link"><span>👤</span> Our Full Story</a>
-          <a href="awards-certifications.html" class="about-link"><span>🏆</span> Awards &amp; Certs</a>
+          <a href="about.html" class="about-link"><span>ðŸ‘¤</span> Our Full Story</a>
+          <a href="awards-certifications.html" class="about-link"><span>ðŸ†</span> Awards &amp; Certs</a>
         </div>
         <div class="mega-links-col">
           <div class="mega-col-label">Get In Touch</div>
-          <a href="https://wa.me/6593860466" class="contact-ch-link whatsapp-ch"><span class="cch-icon">💬</span><div class="cch-text"><div class="cch-label">WhatsApp — Fastest</div><div class="cch-sub">+65 9386 0466</div></div></a>
-          <a href="contact.html#callback" class="contact-ch-link"><span class="cch-icon">📞</span><div class="cch-text"><div class="cch-label">Request Callback</div><div class="cch-sub">+65 6286 4796</div></div></a>
-          <div class="contact-hours">🕒 Mon–Fri 8:00–17:00 · Sat by appt</div>
+          <a href="https://wa.me/6593860466" class="contact-ch-link whatsapp-ch"><span class="cch-icon">ðŸ’¬</span><div class="cch-text"><div class="cch-label">WhatsApp â€” Fastest</div><div class="cch-sub">+65 9386 0466</div></div></a>
+          <a href="contact.html#callback" class="contact-ch-link"><span class="cch-icon">ðŸ“ž</span><div class="cch-text"><div class="cch-label">Request Callback</div><div class="cch-sub">+65 6286 4796</div></div></a>
+          <div class="contact-hours">ðŸ•’ Monâ€“Fri 8:00â€“17:00 Â· Sat by appt</div>
         </div>
       </div>
     </li>
@@ -189,42 +189,57 @@ $newNavBlock = @"
       </svg>
     </button>
     <a href="https://wa.me/6593860466" class="nav-cta-btn">WhatsApp Us</a>
-    <button class="mobile-toggle" onclick="toggleMobileMenu()">☰</button>
+    <button class="mobile-toggle" onclick="toggleMobileMenu()">â˜°</button>
   </div>
 </div>
 <div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-menu-item" onclick="toggleSubmenu('solSub')">Solutions ▾<div class="mobile-submenu" id="solSub"><a href="solutions-hub.html"><strong>→ View All Solutions</strong></a><a href="residential.html">🏠 Private Homes</a><a href="condominiums.html">🏘️ Condominiums</a><a href="commercial.html">🏬 Commercial</a><a href="institutions.html">🏫 Institutions</a><a href="industrial.html">🏭 Industrial</a></div></div>
-  <div class="mobile-menu-item" onclick="toggleSubmenu('techSub')">Technology ▾<div class="mobile-submenu" id="techSub"><a href="technology.html"><strong>→ View All Technology</strong></a><a href="surveillance-systems.html">📷 Surveillance</a><a href="people-access.html">🚪 People Access</a><a href="vehicle-access.html">🚗 Vehicle Access</a><a href="platform-integration.html">📊 Platform</a><a href="brands.html">🏷️ All 20 Brands</a></div></div>
-  <div class="mobile-menu-item" onclick="toggleSubmenu('portSub')">Portfolio ▾<div class="mobile-submenu" id="portSub"><a href="portfolio.html"><strong>→ All Projects</strong></a><a href="portfolio-lviv.html">The L'viv</a><a href="portfolio-scape.html">SCAPE</a></div></div>
-  <div class="mobile-menu-item" onclick="toggleSubmenu('resSub')">Resources ▾<div class="mobile-submenu" id="resSub"><a href="resources.html"><strong>→ All Resources</strong></a><a href="resources-cctv-guide.html">CCTV Guide</a><a href="resources-troubleshoot.html">Troubleshooting</a><a href="resources-faq.html">FAQs</a></div></div>
-  <div class="mobile-menu-item" onclick="toggleSubmenu('insSub')">Insights ▾<div class="mobile-submenu" id="insSub"><a href="insights.html"><strong>→ All Articles</strong></a><a href="insights.html?cat=planning">Security Planning</a><a href="insights.html?cat=technology">Technology</a></div></div>
-  <div class="mobile-menu-item" onclick="toggleSubmenu('conSub')">Contact ▾<div class="mobile-submenu" id="conSub"><a href="about.html"><strong>👤 About Us</strong></a><a href="https://wa.me/6593860466"><strong>💬 WhatsApp</strong></a><a href="contact.html">Office &amp; Hours</a></div></div>
+  <div class="mobile-menu-item" onclick="toggleSubmenu('solSub')">Solutions â–¾<div class="mobile-submenu" id="solSub"><a href="solutions-hub.html"><strong>â†’ View All Solutions</strong></a><a href="residential.html">ðŸ  Private Homes</a><a href="condominiums.html">ðŸ˜ï¸ Condominiums</a><a href="commercial.html">ðŸ¬ Commercial</a><a href="institutions.html">ðŸ« Institutions</a><a href="industrial.html">ðŸ­ Industrial</a></div></div>
+  <div class="mobile-menu-item" onclick="toggleSubmenu('techSub')">Technology â–¾<div class="mobile-submenu" id="techSub"><a href="technology.html"><strong>â†’ View All Technology</strong></a><a href="surveillance-systems.html">ðŸ“· Surveillance</a><a href="people-access.html">ðŸšª People Access</a><a href="vehicle-access.html">ðŸš— Vehicle Access</a><a href="platform-integration.html">ðŸ“Š Platform</a><a href="brands.html">ðŸ·ï¸ All 20 Brands</a></div></div>
+  <div class="mobile-menu-item" onclick="toggleSubmenu('portSub')">Portfolio â–¾<div class="mobile-submenu" id="portSub"><a href="portfolio.html"><strong>â†’ All Projects</strong></a><a href="portfolio-lviv.html">The L'viv</a><a href="portfolio-scape.html">SCAPE</a></div></div>
+  <div class="mobile-menu-item" onclick="toggleSubmenu('resSub')">Resources â–¾<div class="mobile-submenu" id="resSub"><a href="resources.html"><strong>â†’ All Resources</strong></a><a href="resources-cctv-guide.html">CCTV Guide</a><a href="resources-troubleshoot.html">Troubleshooting</a><a href="resources-faq.html">FAQs</a></div></div>
+  <div class="mobile-menu-item" onclick="toggleSubmenu('insSub')">Insights â–¾<div class="mobile-submenu" id="insSub"><a href="insights.html"><strong>â†’ All Articles</strong></a><a href="insights.html?cat=planning">Security Planning</a><a href="insights.html?cat=technology">Technology</a></div></div>
+  <div class="mobile-menu-item" onclick="toggleSubmenu('conSub')">Contact â–¾<div class="mobile-submenu" id="conSub"><a href="about.html"><strong>ðŸ‘¤ About Us</strong></a><a href="https://wa.me/6593860466"><strong>ðŸ’¬ WhatsApp</strong></a><a href="contact.html">Office &amp; Hours</a></div></div>
 </div>
 </nav>
 "@
 
-$files = Get-ChildItem -Path $directoryPath -Filter *.html
+$js = @"
+<script>
+function toggleMobileMenu(){document.getElementById('mobileMenu').classList.toggle('active')}
+function toggleSubmenu(id){const s=document.getElementById(id);s.style.display=(s.style.display==='block')?'none':'block'}
+</script>
+"@
 
-$modifiedCount = 0
+$files = Get-ChildItem -Path $directoryPath -Filter *.html
 
 foreach ($file in $files) {
     if ($file.Name -match "test-.*.html") { continue }
     
-    # Use [System.IO.File]::ReadAllText for reliable UTF-8 reading
     $content = [System.IO.File]::ReadAllText($file.FullName, $utf8NoBom)
     $originalContent = $content
 
-    # 1. Replace the entire sv-nav-css block
-    $content = $content -replace '(?s)<style id="sv-nav-css">.*?</style>', $newCss
+    # Replace CSS
+    if ($content -like "*<style id=`"sv-nav-css`">*") {
+        $content = $content -replace '(?s)<style id="sv-nav-css">.*?</style>', $newCss
+    } elseif ($content -like "*</head>*") {
+        $content = $content -replace '</head>', "$newCss`n</head>"
+    }
 
-    # 2. Replace the entire nav block
-    $content = $content -replace '(?s)<nav class="main-nav">.*?</nav>', $newNavBlock
+    # Replace Nav
+    if ($content -like "*<nav class=`"main-nav`">*") {
+        $content = $content -replace '(?s)<nav class="main-nav">.*?</nav>', $newNav
+    } elseif ($content -like "*<body*>*") {
+        $content = $content -replace '(<body.*?>)', "$1`n$newNav"
+    }
+
+    # Ensure JS is present
+    if ($content -notlike "*toggleMobileMenu()*") {
+        $content = $content -replace '</body>', "$js`n</body>"
+    }
 
     if ($originalContent -ne $content) {
         [System.IO.File]::WriteAllText($file.FullName, $content, $utf8NoBom)
-        $modifiedCount++
         Write-Host "Updated $($file.Name)"
     }
 }
-
-Write-Host "`nHeader propagation complete. Modified $modifiedCount files."
+Write-Host "Header propagation complete."
