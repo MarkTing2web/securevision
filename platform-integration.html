@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -67,7 +67,7 @@
   .check-list { list-style: none; margin-top: 20px; }
   .check-list li { display: flex; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--border-color); font-size: 14px; }
   .check-list li:last-child { border-bottom: none; }
-  .check-list li::before { content: '✓“'; width: 20px; height: 20px; background: var(--accent); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+  .check-list li::before { content: '✓'; width: 20px; height: 20px; background: var(--accent); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
   .dashboard-card {
     background: linear-gradient(135deg, #0E1A2B 0%, #1a2942 100%);
     border-radius: 16px; padding: 32px; color: #fff;
@@ -111,7 +111,7 @@
   .vesta-features { list-style: none; margin: 20px 0 28px; }
   .vesta-features li { display: flex; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--border-color); font-size: 14px; }
   .vesta-features li:last-child { border-bottom: none; }
-  .vesta-features li::before { content: '✓“'; width: 20px; height: 20px; background: var(--accent); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+  .vesta-features li::before { content: '✓'; width: 20px; height: 20px; background: var(--accent); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
   .vesta-badge-box {
     background: linear-gradient(135deg, #0E1A2B 0%, #1a2942 100%);
     border-radius: 16px; padding: 48px 40px; color: #fff; text-align: center;
@@ -304,60 +304,61 @@ a.mobile-menu-item:hover{color:#fff}
 <nav class="main-nav">
 <div class="nav-container">
   <a href="index.html" class="nav-logo-link" aria-label="Securevision" style="gap: 8px;">
-    <img src="/proprietary-assets/securevision-dark-logo.png" alt="Securevision" class="nav-logo-img" style="height: 38px;">
+    <img src="proprietary-assets/securevision-dark-logo.png" alt="Securevision" class="nav-logo-img" style="height: 38px;">
     <span style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:22px;color:#ffffff;letter-spacing:0.5px;">Securevision</span>
   </a>
   <ul class="nav-menu">
     <li class="nav-item"><a href="solutions-hub.html" class="nav-link has-dropdown">Solutions</a>
       <div class="mega-menu mega-menu-solutions">
-        <div class="mega-guidance"><div class="mega-col-label">Need Help Choosing?</div><h4>Not Sure Which Solution Fits?</h4><p>Every property type has unique risks.</p><a href="solutions-hub.html" class="view-all-link">→ View All Solutions</a><div class="mega-trust"><div class="trust-item">✓ Police Licensed L/PS/000267/2023P</div><div class="trust-item">✓ 19+ Years · 2,000+ Sites</div><div class="trust-item">✓ bizSAFE Level 4 · BCA Registered</div></div></div>
-        <div class="mega-links-col"><div class="mega-col-label">By Property Type</div><a href="residential.html" class="solution-link"><strong>🏠 Private Homes</strong><small>Landed properties, bungalows, terraces</small></a><a href="condominiums.html" class="solution-link"><strong>🏘 Condominiums</strong><small>MCSTs, managed estates, apartments</small></a><a href="commercial.html" class="solution-link"><strong>🏪 Commercial &amp; Retail</strong><small>Shops, offices, hotels</small></a><a href="institutions.html" class="solution-link"><strong>🏫 Institutions</strong><small>Schools, healthcare, government</small></a><a href="industrial.html" class="solution-link"><strong>🏭 Factories &amp; Logistics</strong><small>Factories, warehouses, logistics</small></a></div>
+        <div class="mega-guidance"><div class="mega-col-label">Need Help Choosing?</div><h4>Not Sure Which Solution Fits?</h4><p>Every property type has unique risks.</p><a href="solutions-hub.html" class="view-all-link">&rarr; View All Solutions</a><div class="mega-trust"><div class="trust-item">&check; Police Licensed L/PS/000267/2023P</div><div class="trust-item">&check; 19+ Years &middot; Experience</div><div class="trust-item">&check; bizSAFE Level 3 &middot; BCA Registered</div></div></div>
+        <div class="mega-links-col"><div class="mega-col-label">By Property Type</div><a href="residential.html" class="solution-link"><strong>&#127968; Private Homes</strong><small>Landed properties, bungalows, terraces</small></a><a href="condominiums.html" class="solution-link"><strong>&#127970; Condominiums</strong><small>MCSTs, managed estates, apartments</small></a><a href="commercial.html" class="solution-link"><strong>&#127978; Commercial &amp; Retail</strong><small>Shops, offices, hotels</small></a><a href="institutions.html" class="solution-link"><strong>&#127979; Institutions</strong><small>Schools, healthcare, government</small></a><a href="industrial.html" class="solution-link"><strong>&#127981; Factories &amp; Logistics</strong><small>Factories, warehouses, logistics</small></a></div>
       </div>
     </li>
     <li class="nav-item"><a href="technology.html" class="nav-link has-dropdown">Technology</a>
       <div class="mega-menu mega-menu-technology">
-        <div class="mega-guidance"><div class="mega-col-label">Our Systems</div><h4>Systems &amp; Technology</h4><p>Four subsystem groups on the SECURE™ framework.</p><a href="technology.html" class="view-all-link">→ View All Technology</a><div class="mega-trust"><div class="trust-item">✓ SECURE™ Integration</div><div class="trust-item">✓ VESTA™ Enterprise Platform</div><div class="trust-item">✓ GantryGo™ Vehicle Intercom</div></div></div>
-        <div class="mega-links-col"><div class="mega-col-label">By System Type</div><a href="surveillance-systems.html" class="product-link"><span class="pl-dot" style="background:#2b6cb0"></span><div><strong>📷 Surveillance &amp; Detection</strong><small>IP cameras, AI analytics, NVR, alarms</small></div></a><a href="people-access.html" class="product-link"><span class="pl-dot" style="background:#319795"></span><div><strong>🚪 People Access Systems</strong><small>Biometrics, visitor management, intercom</small></div></a><a href="vehicle-access.html" class="product-link"><span class="pl-dot" style="background:#dd6b20"></span><div><strong>🚗 Vehicle Access Systems</strong><small>Boom gates, ANPR, GantryGo™</small></div></a><a href="platform-integration.html" class="product-link"><span class="pl-dot" style="background:#38a169"></span><div><strong>📊 Platform &amp; Integration</strong><small>VESTA™ dashboard, multi-site</small></div></a></div>
-        <div class="mega-brands-col"><div class="mega-col-label">Brands We Represent</div><div class="brand-grid"><a href="hikvision-singapore.html">Hikvision</a><a href="hanwha-samsung-singapore.html">Hanwha</a><a href="uniview-singapore.html">Uniview</a><a href="milesight-singapore.html">Milesight</a><a href="ajax-alarm-singapore.html">AJAX</a><a href="risco-alarm-singapore.html">RISCO</a><a href="paradox-alarm-singapore.html">Paradox</a><a href="dsc-alarm-singapore.html">DSC</a><a href="zkteco-singapore.html">ZKTeco</a><a href="suprema-singapore.html">Suprema</a><a href="hid-singapore.html">HID</a><a href="entrypass-singapore.html">EntryPass</a><a href="akuvox-singapore.html">Akuvox</a><a href="aiphone-singapore.html">Aiphone</a><a href="faac-singapore.html">FAAC</a><a href="mag-gates-singapore.html">MAG</a></div><a href="brands.html" class="view-all-link" style="margin-top:2px;font-size:12px">→ All 20 Brands</a></div>
+        <div class="mega-guidance"><div class="mega-col-label">Our Systems</div><h4>Systems &amp; Technology</h4><p>Four subsystem groups on the SECURE&trade; framework.</p><a href="technology.html" class="view-all-link">&rarr; View All Technology</a><div class="mega-trust"><div class="trust-item">&check; SECURE&trade; Integration</div><div class="trust-item">&check; VESTA&trade; Enterprise Platform</div><div class="trust-item">&check; GantryGo&trade; Vehicle Intercom</div></div></div>
+        <div class="mega-links-col"><div class="mega-col-label">By System Type</div><a href="surveillance-systems.html" class="product-link"><span class="pl-dot" style="background:#2b6cb0"></span><div><strong>&#128247; Surveillance &amp; Detection</strong><small>IP cameras, AI analytics, NVR, alarms</small></div></a><a href="people-access.html" class="product-link"><span class="pl-dot" style="background:#319795"></span><div><strong>&#128682; People Access Systems</strong><small>Biometrics, visitor management, intercom</small></div></a><a href="vehicle-access.html" class="product-link"><span class="pl-dot" style="background:#dd6b20"></span><div><strong>&#128663; Vehicle Access Systems</strong><small>Boom gates, ANPR, GantryGo&trade;</small></div></a><a href="platform-integration.html" class="product-link"><span class="pl-dot" style="background:#38a169"></span><div><strong>&#128202; Platform &amp; Integration</strong><small>VESTA&trade; dashboard, multi-site</small></div></a></div>
+        <div class="mega-brands-col"><div class="mega-col-label">Brands We Represent</div><div class="brand-grid"><a href="hikvision-singapore.html">Hikvision</a><a href="hanwha-samsung-singapore.html">Hanwha</a><a href="uniview-singapore.html">Uniview</a><a href="milesight-singapore.html">Milesight</a><a href="ajax-alarm-singapore.html">AJAX</a><a href="risco-alarm-singapore.html">RISCO</a><a href="paradox-alarm-singapore.html">Paradox</a><a href="dsc-alarm-singapore.html">DSC</a><a href="zkteco-singapore.html">ZKTeco</a><a href="suprema-singapore.html">Suprema</a><a href="hid-singapore.html">HID</a><a href="entrypass-singapore.html">EntryPass</a><a href="akuvox-singapore.html">Akuvox</a><a href="aiphone-singapore.html">Aiphone</a><a href="faac-singapore.html">FAAC</a><a href="mag-gates-singapore.html">MAG</a></div><a href="brands.html" class="view-all-link" style="margin-top:2px;font-size:12px">&rarr; All 20 Brands</a></div>
       </div>
     </li>
     <li class="nav-item"><a href="portfolio.html" class="nav-link has-dropdown">Portfolio</a>
       <div class="mega-menu mega-menu-portfolio">
         <div class="mega-links-col"><div class="mega-col-label">By Property</div><a href="portfolio.html?filter=residential" class="port-link"><span class="port-dot" style="background:#38B000"></span>Private Homes</a><a href="portfolio.html?filter=condominium" class="port-link"><span class="port-dot" style="background:#4361EE"></span>Condominiums</a><a href="portfolio.html?filter=commercial" class="port-link"><span class="port-dot" style="background:#FF6D00"></span>Commercial</a><a href="portfolio.html?filter=institution" class="port-link"><span class="port-dot" style="background:#0056b3"></span>Institutions</a><a href="portfolio.html?filter=industrial" class="port-link"><span class="port-dot" style="background:#7209B7"></span>Industrial</a></div>
         <div class="mega-links-col"><div class="mega-col-label">By System</div><a href="portfolio.html?filter=surveillance" class="port-link"><span class="port-dot" style="background:#2b6cb0"></span>Surveillance</a><a href="portfolio.html?filter=people-access" class="port-link"><span class="port-dot" style="background:#319795"></span>People Access</a><a href="portfolio.html?filter=vehicle-access" class="port-link"><span class="port-dot" style="background:#dd6b20"></span>Vehicle Access</a><a href="portfolio.html?filter=platform" class="port-link"><span class="port-dot" style="background:#38a169"></span>Platform</a><a href="portfolio.html" class="port-link"><span class="port-dot" style="background:#888"></span>All Projects</a></div>
-        <div class="mega-links-col"><div class="mega-col-label">Featured</div><a href="portfolio-lviv.html" class="port-featured"><div class="pf-label">Condominium</div><div class="pf-title">The L'viv</div><div class="pf-meta">VESTA™ + GantryGo™</div></a><a href="portfolio-scape.html" class="port-featured"><div class="pf-label">Commercial</div><div class="pf-title">SCAPE</div><div class="pf-meta">200-camera AI system</div></a></div>
+        <div class="mega-links-col"><div class="mega-col-label">Featured</div><a href="portfolio-lviv.html" class="port-featured"><div class="pf-label">Condominium</div><div class="pf-title">The L'viv</div><div class="pf-meta">VESTA&trade; + GantryGo&trade;</div></a><a href="portfolio-scape.html" class="port-featured"><div class="pf-label">Commercial</div><div class="pf-title">SCAPE</div><div class="pf-meta">200-camera AI system</div></a></div>
       </div>
     </li>
     <li class="nav-item"><a href="resources.html" class="nav-link has-dropdown">Resources</a>
       <div class="mega-menu mega-menu-resources">
-        <div class="mega-links-col"><div class="res-col-header"><span>🦮</span><h4>Planning Tools</h4></div><a href="resources.html" class="res-link">Security Calculator <span class="rl-soon">Soon</span></a><a href="resources.html" class="res-link">Risk Assessment <span class="rl-soon">Soon</span></a></div>
-        <div class="mega-links-col"><div class="res-col-header"><span>📚</span><h4>Guides</h4></div><a href="resources-cctv-guide.html" class="res-link">CCTV Buyer's Guide</a><a href="resources-access-control.html" class="res-link">Access Control</a></div>
-        <div class="mega-links-col"><div class="res-col-header"><span>🔧</span><h4>Support</h4></div><a href="resources-troubleshoot.html" class="res-link">Troubleshooting</a><a href="resources-faq.html" class="res-link">FAQs</a></div>
-        <div class="mega-links-col"><div class="res-col-header"><span>📥</span><h4>Downloads</h4></div><a href="resources.html" class="res-link">Spec Sheets <span class="rl-soon">Soon</span></a></div>
+        <div class="mega-links-col"><div class="res-col-header"><span>&#129454;</span><h4>Planning Tools</h4></div><a href="resources.html" class="res-link">Security Calculator <span class="rl-soon">Soon</span></a><a href="resources.html" class="res-link">Risk Assessment <span class="rl-soon">Soon</span></a></div>
+        <div class="mega-links-col"><div class="res-col-header"><span>&#128218;</span><h4>Guides</h4></div><a href="resources-cctv-guide.html" class="res-link">CCTV Buyer's Guide</a><a href="resources-access-control.html" class="res-link">Access Control</a></div>
+        <div class="mega-links-col"><div class="res-col-header"><span>&#128295;</span><h4>Support</h4></div><a href="resources-troubleshoot.html" class="res-link">Troubleshooting</a><a href="resources-faq.html" class="res-link">FAQs</a></div>
+        <div class="mega-links-col"><div class="res-col-header"><span>&#128229;</span><h4>Downloads</h4></div><a href="resources.html" class="res-link">Spec Sheets <span class="rl-soon">Soon</span></a></div>
       </div>
     </li>
     <li class="nav-item"><a href="insights.html" class="nav-link has-dropdown">Insights</a>
       <div class="mega-menu mega-menu-insights">
-        <div class="mega-guidance"><div class="mega-col-label">Latest</div><a href="insights-integrated-systems.html" class="insights-featured"><span class="if-tag">Security Planning</span><div class="if-title">Why Integrated Systems Outperform Standalone</div><div class="if-meta">6 min read</div></a><a href="insights.html" class="view-all-link" style="margin-top:10px">→ All Articles</a></div>
-        <div class="mega-links-col"><div class="mega-col-label">By Topic</div><a href="insights.html?cat=planning" class="insights-cat"><span class="ic-icon">🏗</span><div class="ic-text"><strong>Security Planning</strong><small>Property Managers</small></div></a><a href="insights.html?cat=technology" class="insights-cat"><span class="ic-icon">🤖</span><div class="ic-text"><strong>Technology</strong><small>AI, ANPR, biometrics</small></div></a><a href="insights.html?cat=industry" class="insights-cat"><span class="ic-icon">🇸🇬</span><div class="ic-text"><strong>SG Industry</strong><small>Regulations, trends</small></div></a></div>
+        <div class="mega-guidance"><div class="mega-col-label">Latest</div><a href="insights-integrated-systems.html" class="insights-featured"><span class="if-tag">Security Planning</span><div class="if-title">Why Integrated Systems Outperform Standalone</div><div class="if-meta">6 min read</div></a><a href="insights.html" class="view-all-link" style="margin-top:10px">&rarr; All Articles</a></div>
+        <div class="mega-links-col"><div class="mega-col-label">By Topic</div><a href="insights.html?cat=planning" class="insights-cat"><span class="ic-icon">&#127959;</span><div class="ic-text"><strong>Security Planning</strong><small>Property Managers</small></div></a><a href="insights.html?cat=technology" class="insights-cat"><span class="ic-icon">&#129302;</span><div class="ic-text"><strong>Technology</strong><small>AI, ANPR, biometrics</small></div></a><a href="insights.html?cat=industry" class="insights-cat"><span class="ic-icon">&#127480;&#127468;</span><div class="ic-text"><strong>SG Industry</strong><small>Regulations, trends</small></div></a></div>
       </div>
     </li>
-    <li class="nav-item"><a href="contact.html" class="nav-link has-dropdown">Contact</a>
-      <div class="mega-menu mega-menu-contact">
+    <li class="nav-item"><a href="about.html" class="nav-link has-dropdown">About</a>
+      <div class="mega-menu mega-menu-about">
         <div class="mega-links-col">
-          <div class="mega-col-label">About Securevision</div>
+          <div class="mega-col-label">Company</div>
           <div class="about-preview-card">
-            <div class="apc-founder"><div class="apc-avatar">👤</div><div><div class="apc-name">Ler Wee Meng</div><div class="apc-title">Founder · NUS Eng + UOL Law</div></div></div>
+            <div class="apc-founder"><div class="apc-avatar">&#128100;   </div><div><div class="apc-name">Ler Wee Meng</div><div class="apc-title">Founder &middot; NUS Eng + UOL Law</div></div></div>
             <div class="apc-quote">Built on engineering. Backed by law. Since 2006.</div>
           </div>
-          <a href="about.html" class="about-link"><span>👤</span> Our Full Story</a>
-          <a href="awards-certifications.html" class="about-link"><span>🏆</span> Awards &amp; Certs</a>
+          <a href="about.html#founder" class="about-link"><span class="al-icon">&#128100;</span> Founder's Story</a>
+          <a href="about.html" class="about-link"><span class="al-icon">&#128737;</span> Credentials &amp; Licences</a>
+          <a href="awards-certifications.html" class="about-link"><span class="al-icon">&#127942;</span> Awards &amp; Certs</a>
         </div>
         <div class="mega-links-col">
-          <div class="mega-col-label">Get In Touch</div>
-          <a href="https://wa.me/6593860466" class="contact-ch-link whatsapp-ch"><span class="cch-icon">💬</span><div class="cch-text"><div class="cch-label">WhatsApp — Fastest</div><div class="cch-sub">+65 9386 0466</div></div></a>
-          <a href="contact.html#callback" class="contact-ch-link"><span class="cch-icon">📞</span><div class="cch-text"><div class="cch-label">Request Callback</div><div class="cch-sub">+65 6286 4796</div></div></a>
-          <div class="contact-hours">🕒 Mon 8:00 · Sat by appt</div>
+          <div class="mega-col-label">Contact</div>
+          <a href="https://wa.me/6593860466" class="contact-ch-link whatsapp-ch"><span class="cch-icon">&#128172;</span><div class="cch-text"><div class="cch-label">WhatsApp &mdash; Fastest</div><div class="cch-sub">+65 9386 0466</div></div></a>
+          <a href="contact.html#contact-form" class="contact-ch-link"><span class="cch-icon">&#128221;</span><div class="cch-text"><div class="cch-label">Contact Form</div><div class="cch-sub">Detailed enquiries</div></div></a>
+          <div class="contact-hours">&#128344; Mon&ndash;Fri 8:00&ndash;17:00 &middot; Sat by appt<br>&#128205; Geylang East Ave 3</div>
         </div>
       </div>
     </li>
@@ -370,16 +371,16 @@ a.mobile-menu-item:hover{color:#fff}
       </svg>
     </button>
     <a href="https://wa.me/6593860466" class="nav-cta-btn">WhatsApp Us</a>
-    <button class="mobile-toggle" onclick="toggleMobileMenu()">☰</button>
+    <button class="mobile-toggle" onclick="toggleMobileMenu()">â˜°</button>
   </div>
 </div>
 <div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-menu-item" onclick="toggleSubmenu('solSub')">Solutions ▾<div class="mobile-submenu" id="solSub"><a href="solutions-hub.html"><strong>→ View All Solutions</strong></a><a href="residential.html">🏠 Private Homes</a><a href="condominiums.html">🏘 Condominiums</a><a href="commercial.html">🏪 Commercial</a><a href="institutions.html">🏫 Institutions</a><a href="industrial.html">🏭 Industrial</a></div></div>
-  <div class="mobile-menu-item" onclick="toggleSubmenu('techSub')">Technology ▾<div class="mobile-submenu" id="techSub"><a href="technology.html"><strong>→ View All Technology</strong></a><a href="surveillance-systems.html">📷 Surveillance</a><a href="people-access.html">🚪 People Access</a><a href="vehicle-access.html">🚗 Vehicle Access</a><a href="platform-integration.html">📊 Platform</a><a href="brands.html">🏷 All 20 Brands</a></div></div>
-  <div class="mobile-menu-item" onclick="toggleSubmenu('portSub')">Portfolio ▾<div class="mobile-submenu" id="portSub"><a href="portfolio.html"><strong>→ All Projects</strong></a><a href="portfolio-lviv.html">The L'viv</a><a href="portfolio-scape.html">SCAPE</a></div></div>
-  <div class="mobile-menu-item" onclick="toggleSubmenu('resSub')">Resources ▾<div class="mobile-submenu" id="resSub"><a href="resources.html"><strong>→ All Resources</strong></a><a href="resources-cctv-guide.html">CCTV Guide</a><a href="resources-troubleshoot.html">Troubleshooting</a><a href="resources-faq.html">FAQs</a></div></div>
-  <div class="mobile-menu-item" onclick="toggleSubmenu('insSub')">Insights ▾<div class="mobile-submenu" id="insSub"><a href="insights.html"><strong>→ All Articles</strong></a><a href="insights.html?cat=planning">Security Planning</a><a href="insights.html?cat=technology">Technology</a></div></div>
-  <div class="mobile-menu-item" onclick="toggleSubmenu('conSub')">Contact ▾<div class="mobile-submenu" id="conSub"><a href="about.html"><strong>👤 About Us</strong></a><a href="https://wa.me/6593860466"><strong>💬 WhatsApp</strong></a><a href="contact.html">Office &amp; Hours</a></div></div>
+  <div class="mobile-menu-item" onclick="toggleSubmenu('solSub')">Solutions â&ndash;¾<div class="mobile-submenu" id="solSub"><a href="solutions-hub.html"><strong>&rarr; View All Solutions</strong></a><a href="residential.html">&#127968; Private Homes</a><a href="condominiums.html">&#127970; Condominiums</a><a href="commercial.html">&#127978; Commercial</a><a href="institutions.html">&#127979; Institutions</a><a href="industrial.html">&#127981; Industrial</a></div></div>
+  <div class="mobile-menu-item" onclick="toggleSubmenu('techSub')">Technology â&ndash;¾<div class="mobile-submenu" id="techSub"><a href="technology.html"><strong>&rarr; View All Technology</strong></a><a href="surveillance-systems.html">&#128247; Surveillance</a><a href="people-access.html">&#128682; People Access</a><a href="vehicle-access.html">&#128663; Vehicle Access</a><a href="platform-integration.html">&#128202; Platform</a><a href="brands.html">&#127991; All 20 Brands</a></div></div>
+  <div class="mobile-menu-item" onclick="toggleSubmenu('portSub')">Portfolio â&ndash;¾<div class="mobile-submenu" id="portSub"><a href="portfolio.html"><strong>&rarr; All Projects</strong></a><a href="portfolio-lviv.html">The L'viv</a><a href="portfolio-scape.html">SCAPE</a></div></div>
+  <div class="mobile-menu-item" onclick="toggleSubmenu('resSub')">Resources â&ndash;¾<div class="mobile-submenu" id="resSub"><a href="resources.html"><strong>&rarr; All Resources</strong></a><a href="resources-cctv-guide.html">CCTV Buyer's Guide</a><a href="resources-access-control.html">Access Control</a><a href="resources-troubleshoot.html">Troubleshooting</a><a href="resources-faq.html">FAQs</a></div></div>
+  <div class="mobile-menu-item" onclick="toggleSubmenu('insSub')">Insights â&ndash;¾<div class="mobile-submenu" id="insSub"><a href="insights.html"><strong>&rarr; All Articles</strong></a><a href="insights.html?cat=planning">Security Planning</a><a href="insights.html?cat=technology">Technology</a></div></div>
+  <div class="mobile-menu-item" onclick="toggleSubmenu('abtSub')">About â&ndash;¾<div class="mobile-submenu" id="abtSub"><a href="about.html"><strong>&#128100; About Company</strong></a><a href="about.html#founder">Founder's Story</a><a href="awards-certifications.html">Awards &amp; Certs</a><a href="https://wa.me/6593860466"><strong>&#128172; WhatsApp</strong></a><a href="contact.html#contact-form">&#128221; Contact Form</a><a href="contact.html">Office &amp; Hours</a></div></div>
 </div>
 </nav>
 
@@ -394,12 +395,12 @@ a.mobile-menu-item:hover{color:#fff}
       <p class="hero-lead">The intelligence layer that unifies all your security subsystems. Real-time dashboards, incident management, API integrations, and centralised control across every site.</p>
 
       <div class="hero-tags">
-        <span class="hero-tag">ðŸ“Š Unified Dashboard</span>
-        <span class="hero-tag">ðŸ”” Incident Management</span>
-        <span class="hero-tag">ðŸ”— API Integration</span>
+        <span class="hero-tag">ðŸ&ldquo;Š Unified Dashboard</span>
+        <span class="hero-tag">🔗 Incident Management</span>
+        <span class="hero-tag">ðŸ&rdquo;&mdash; API Integration</span>
         <span class="hero-tag">ðŸ¢ Multi-site</span>
-        <span class="hero-tag">ðŸ“± Mobile Access</span>
-        <span class="hero-tag">ðŸ“‹ Audit & Reports</span>
+        <span class="hero-tag">ðŸ&ldquo;± Mobile Access</span>
+        <span class="hero-tag">📋 Audit & Reports</span>
       </div>
       <div class="hero-btns">
         <a href="#capabilities" class="btn btn-accent">View Platform Features</a>
@@ -416,12 +417,12 @@ a.mobile-menu-item:hover{color:#fff}
       <div class="overview-text">
         <span class="eyebrow">Why It Matters</span>
         <h2>One Screen. Every System. Total Control.</h2>
-        <p>Standalone security devices are only as useful as the operator watching them. A platform-integrated security system turns isolated events into actionable intelligence — automatically correlating camera footage, access events, and alarm triggers into a coherent operational picture.</p>
-        <p>Securevision's platform layer connects all four subsystem groups — surveillance, people access, vehicle access, and alarms — into a single management environment. Whether you're managing one building or twenty sites, your security team sees everything from one interface.</p>
+        <p>Standalone security devices are only as useful as the operator watching them. A platform-integrated security system turns isolated events into actionable intelligence &mdash; automatically correlating camera footage, access events, and alarm triggers into a coherent operational picture.</p>
+        <p>Securevision's platform layer connects all four subsystem groups &mdash; surveillance, people access, vehicle access, and alarms &mdash; into a single management environment. Whether you're managing one building or twenty sites, your security team sees everything from one interface.</p>
         <ul class="check-list">
           <li>Unified event timeline across all subsystems in real time</li>
           <li>Automatic incident creation with supporting camera snapshots</li>
-          <li>Role-based access — security ops, management, and admin views</li>
+          <li>Role-based access &mdash; security ops, management, and admin views</li>
           <li>Scheduled and on-demand reports for compliance and audits</li>
           <li>Remote system health monitoring with automated fault alerts</li>
           <li>API connectors for BMS, HR, ERP, and third-party integrations</li>
@@ -436,10 +437,10 @@ a.mobile-menu-item:hover{color:#fff}
           <div class="dash-stat"><div class="ds-num">12</div><div class="ds-label">Sites Connected</div></div>
         </div>
         <div class="dash-alerts">
-          <div class="dash-alert"><span>ðŸ”´ Motion detected — Carpark L3</span><span class="alert-time">2m ago</span></div>
-          <div class="dash-alert"><span>ðŸŸ¡ Door held open — Server Room</span><span class="alert-time">14m ago</span></div>
-          <div class="dash-alert"><span>ðŸŸ¢ Access granted — Main Lobby</span><span class="alert-time">21m ago</span></div>
-          <div class="dash-alert"><span>ðŸŸ¢ Vehicle entry — East Gantry</span><span class="alert-time">38m ago</span></div>
+          <div class="dash-alert"><span>ðŸ&rdquo;´ Motion detected &mdash; Carpark L3</span><span class="alert-time">2m ago</span></div>
+          <div class="dash-alert"><span>ðŸŸ¡ Door held open &mdash; Server Room</span><span class="alert-time">14m ago</span></div>
+          <div class="dash-alert"><span>ðŸŸ¢ Access granted &mdash; Main Lobby</span><span class="alert-time">21m ago</span></div>
+          <div class="dash-alert"><span>ðŸŸ¢ Vehicle entry &mdash; East Gantry</span><span class="alert-time">38m ago</span></div>
         </div>
       </div>
     </div>
@@ -452,18 +453,18 @@ a.mobile-menu-item:hover{color:#fff}
     <div class="section-header">
       <span class="eyebrow">Platform Capabilities</span>
       <h2>What the Platform Enables</h2>
-      <p>The platform is not a product — it's the connective intelligence that makes your security infrastructure exponentially more powerful.</p>
+      <p>The platform is not a product &mdash; it's the connective intelligence that makes your security infrastructure exponentially more powerful.</p>
     </div>
     <div class="cap-grid">
       <div class="cap-card">
-        <div class="cap-icon">ðŸ“Š</div>
+        <div class="cap-icon">ðŸ&ldquo;Š</div>
         <h3>Unified Security Dashboard</h3>
-        <p>A single-screen view of all security events, system health, and active incidents across all subsystems and all sites — updated in real time.</p>
+        <p>A single-screen view of all security events, system health, and active incidents across all subsystems and all sites &mdash; updated in real time.</p>
       </div>
       <div class="cap-card">
-        <div class="cap-icon">ðŸ””</div>
+        <div class="cap-icon">🔗</div>
         <h3>Incident Management</h3>
-        <p>Automatic incident creation with correlated evidence — camera clips, access logs, and alarm triggers collated into a single incident record for investigation.</p>
+        <p>Automatic incident creation with correlated evidence &mdash; camera clips, access logs, and alarm triggers collated into a single incident record for investigation.</p>
       </div>
       <div class="cap-card">
         <div class="cap-icon">ðŸ¢</div>
@@ -471,17 +472,17 @@ a.mobile-menu-item:hover{color:#fff}
         <p>Manage 2 or 200 sites from one platform. Centralised policy management, consolidated reporting, and instant remote access to any site's systems.</p>
       </div>
       <div class="cap-card">
-        <div class="cap-icon">ðŸ“±</div>
+        <div class="cap-icon">ðŸ&ldquo;±</div>
         <h3>Mobile Operations</h3>
         <p>Security managers and duty officers can view live cameras, respond to incidents, and manage access credentials from any smartphone or tablet.</p>
       </div>
       <div class="cap-card">
-        <div class="cap-icon">ðŸ“‹</div>
+        <div class="cap-icon">📋</div>
         <h3>Compliance Reporting</h3>
-        <p>Scheduled audit reports, access logs, visitor records, and incident summaries — formatted for MAS TRM, PDPA, and internal governance requirements.</p>
+        <p>Scheduled audit reports, access logs, visitor records, and incident summaries &mdash; formatted for MAS TRM, PDPA, and internal governance requirements.</p>
       </div>
       <div class="cap-card">
-        <div class="cap-icon">ðŸ”§</div>
+        <div class="cap-icon">🔧</div>
         <h3>Remote Health Monitoring</h3>
         <p>Continuous monitoring of all connected devices. Instant alerts when a camera goes offline, a door controller loses power, or a barrier stops responding.</p>
       </div>
@@ -495,7 +496,7 @@ a.mobile-menu-item:hover{color:#fff}
     <div class="section-header">
       <span class="eyebrow">Integration Ecosystem</span>
       <h2>Connects With What You Already Have</h2>
-      <p>Open API architecture means the Securevision platform connects with existing building systems, HR platforms, and enterprise applications — not the other way around.</p>
+      <p>Open API architecture means the Securevision platform connects with existing building systems, HR platforms, and enterprise applications &mdash; not the other way around.</p>
     </div>
     <div class="int-grid">
       <div class="int-card">
@@ -505,43 +506,43 @@ a.mobile-menu-item:hover{color:#fff}
         <p>BMS integration for HVAC, lighting, and lift control linked to security events.</p>
       </div>
       <div class="int-card">
-        <div class="int-icon">ðŸ‘¥</div>
+        <div class="int-icon">ðŸ&lsquo;¥</div>
         <div class="int-badge">Native</div>
         <h4>HR / Payroll Systems</h4>
         <p>Access credential provisioning synced with employee onboarding and offboarding.</p>
       </div>
       <div class="int-card">
-        <div class="int-icon">ðŸš’</div>
+        <div class="int-icon">ðŸš&rsquo;</div>
         <div class="int-badge">Native</div>
         <h4>Fire & Safety Systems</h4>
         <p>Automatic access unlock on fire alarm. Correlated incident view across fire and security.</p>
       </div>
       <div class="int-card">
-        <div class="int-icon">ðŸ“ž</div>
+        <div class="int-icon">📞</div>
         <div class="int-badge">Native</div>
         <h4>Intercom Systems</h4>
         <p>Visitor intercom calls appear in the dashboard with camera view and remote door release.</p>
       </div>
       <div class="int-card">
-        <div class="int-icon">ðŸ…¿ï¸</div>
+        <div class="int-icon">ðŸ&hellip;¿️</div>
         <div class="int-badge">API</div>
         <h4>Parking Management</h4>
         <p>Vehicle movement data feeds into parking occupancy, billing, and availability systems.</p>
       </div>
       <div class="int-card">
-        <div class="int-icon">ðŸ“Š</div>
+        <div class="int-icon">ðŸ&ldquo;Š</div>
         <div class="int-badge">API</div>
         <h4>Analytics & BI Tools</h4>
         <p>Export security data to Power BI, Tableau, or custom dashboards for management reporting.</p>
       </div>
       <div class="int-card">
-        <div class="int-icon">ðŸ“²</div>
+        <div class="int-icon">ðŸ&ldquo;²</div>
         <div class="int-badge">API</div>
         <h4>Mobile Apps</h4>
         <p>White-label resident app integration for visitor management, intercom, and door access.</p>
       </div>
       <div class="int-card">
-        <div class="int-icon">ðŸ”—</div>
+        <div class="int-icon">ðŸ&rdquo;&mdash;</div>
         <div class="int-badge">Custom</div>
         <h4>Custom Integrations</h4>
         <p>Our platform team builds custom connectors for proprietary or legacy building systems.</p>
@@ -555,7 +556,7 @@ a.mobile-menu-item:hover{color:#fff}
   <div class="container">
     <div class="vesta-grid">
       <div class="vesta-badge-box">
-        <div class="vesta-name">VE<span>S</span>TA™</div>
+        <div class="vesta-name">VE<span>S</span>TA&trade;</div>
         <div class="vesta-sub">Securevision Enterprise Platform</div>
         <div class="vesta-layers">
           <div class="vesta-layer"><span class="layer-dot"></span> Unified event ingestion from all subsystems</div>
@@ -568,11 +569,11 @@ a.mobile-menu-item:hover{color:#fff}
       </div>
       <div class="vesta-content">
         <span class="eyebrow">Securevision Proprietary</span>
-        <h2>VESTA™ Enterprise Security Platform</h2>
-        <p>VESTA™ is Securevision's enterprise management platform — purpose-built for the complexity of large-scale, multi-site security deployments in Singapore's commercial and institutional sectors.</p>
-        <p>Where standard VMS software manages cameras in isolation, VESTA™ brings together every security event — access, video, vehicle, alarm, intercom — into a unified operational intelligence layer.</p>
+        <h2>VESTA&trade; Enterprise Security Platform</h2>
+        <p>VESTA&trade; is Securevision's enterprise management platform &mdash; purpose-built for the complexity of large-scale, multi-site security deployments in Singapore's commercial and institutional sectors.</p>
+        <p>Where standard VMS software manages cameras in isolation, VESTA&trade; brings together every security event &mdash; access, video, vehicle, alarm, intercom &mdash; into a unified operational intelligence layer.</p>
         <ul class="vesta-features">
-          <li>Deployed on-premise, cloud, or hybrid — your choice</li>
+          <li>Deployed on-premise, cloud, or hybrid &mdash; your choice</li>
           <li>Scales from 1 site to enterprise multi-property portfolios</li>
           <li>SOC 2 aligned security architecture and data handling</li>
           <li>Configurable retention policies for PDPA compliance</li>
@@ -586,7 +587,7 @@ a.mobile-menu-item:hover{color:#fff}
       </a>
     </li>
   </ul>
-        <a href="https://wa.me/6593860466" class="btn btn-accent">Ask About VESTA™</a>
+        <a href="https://wa.me/6593860466" class="btn btn-accent">Ask About VESTA&trade;</a>
       </div>
     </div>
   </div>
@@ -613,12 +614,12 @@ a.mobile-menu-item:hover{color:#fff}
       <div class="use-card">
         <div class="use-badge">Mixed-Use</div>
         <h3>Integrated Development Operations</h3>
-        <p>Separate management domains for residential, retail, and office tenants — with a building management layer that sees everything and manages shared infrastructure.</p>
+        <p>Separate management domains for residential, retail, and office tenants &mdash; with a building management layer that sees everything and manages shared infrastructure.</p>
       </div>
       <div class="use-card">
         <div class="use-badge">Industrial</div>
         <h3>Manufacturing Site Control</h3>
-        <p>Contractor access management, hazardous zone control, and headcount reporting — all in one platform. Integration with ERP for shift-based access scheduling.</p>
+        <p>Contractor access management, hazardous zone control, and headcount reporting &mdash; all in one platform. Integration with ERP for shift-based access scheduling.</p>
       </div>
       <div class="use-card">
         <div class="use-badge">Retail</div>
@@ -642,9 +643,9 @@ a.mobile-menu-item:hover{color:#fff}
     <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:40px;">
       <div>
         <h2 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:clamp(22px,3vw,32px);margin-bottom:10px;">Brands We Integrate</h2>
-        <p style="font-size:15px;color:#5F6368;max-width:660px;line-height:1.7;margin:0;">The VESTA™ platform integrates with all major security hardware brands we install — from camera manufacturers to access control and alarm systems.</p>
+        <p style="font-size:15px;color:#5F6368;max-width:660px;line-height:1.7;margin:0;">The VESTA&trade; platform integrates with all major security hardware brands we install &mdash; from camera manufacturers to access control and alarm systems.</p>
       </div>
-      <a href="brands.html" style="display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:8px;background:var(--accent,#38a169);color:#fff;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;text-decoration:none;white-space:nowrap;flex-shrink:0;">View All 20 Brands â†’</a>
+      <a href="brands.html" style="display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:8px;background:var(--accent,#38a169);color:#fff;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;text-decoration:none;white-space:nowrap;flex-shrink:0;">View All 20 Brands â†&rsquo;</a>
     </div>
     <style>
       .bwi-group { margin-bottom: 36px; }
@@ -687,7 +688,7 @@ a.mobile-menu-item:hover{color:#fff}
     
       <div class="bwi-group">
         <div class="bwi-group-header">
-          <span class="bwi-group-icon">ðŸ”—</span>
+          <span class="bwi-group-icon">ðŸ&rdquo;&mdash;</span>
           <span class="bwi-group-title">Integrated Hardware Brands</span>
           <span class="bwi-group-bar" style="background:#38a169;"></span>
         </div>
@@ -695,27 +696,27 @@ a.mobile-menu-item:hover{color:#fff}
           <a href="hikvision-singapore.html" class="bwi-card">
             <div class="bwi-name">Hikvision</div>
             <div class="bwi-desc">CCTV · primary camera brand</div>
-            <div class="bwi-tier" style="background:#2b6cb0;">Midâ€“Premium</div>
+            <div class="bwi-tier" style="background:#2b6cb0;">Midâ€&ldquo;Premium</div>
           </a>
           <a href="ajax-alarm-singapore.html" class="bwi-card">
             <div class="bwi-name">AJAX Systems</div>
             <div class="bwi-desc">Alarm · wireless integration</div>
-            <div class="bwi-tier" style="background:#2b6cb0;">Midâ€“Premium</div>
+            <div class="bwi-tier" style="background:#2b6cb0;">Midâ€&ldquo;Premium</div>
           </a>
           <a href="zkteco-singapore.html" class="bwi-card">
             <div class="bwi-name">ZKTeco</div>
             <div class="bwi-desc">Access control · biometric</div>
-            <div class="bwi-tier" style="background:#38a169;">Budgetâ€“Mid</div>
+            <div class="bwi-tier" style="background:#38a169;">Budgetâ€&ldquo;Mid</div>
           </a>
           <a href="akuvox-singapore.html" class="bwi-card">
             <div class="bwi-name">Akuvox</div>
             <div class="bwi-desc">Intercom · SIP integration</div>
-            <div class="bwi-tier" style="background:#2b6cb0;">Midâ€“Premium</div>
+            <div class="bwi-tier" style="background:#2b6cb0;">Midâ€&ldquo;Premium</div>
           </a>
           <a href="faac-singapore.html" class="bwi-card">
             <div class="bwi-name">FAAC</div>
             <div class="bwi-desc">Barrier control integration</div>
-            <div class="bwi-tier" style="background:#2b6cb0;">Midâ€“Premium</div>
+            <div class="bwi-tier" style="background:#2b6cb0;">Midâ€&ldquo;Premium</div>
           </a>
         </div>
       </div>
@@ -739,5 +740,7 @@ a.mobile-menu-item:hover{color:#fff}
 
 <footer>
   <div class="footer-bottom">
-    <p>© 2025 Securevision Pte Ltd &nbsp;|&nbsp; Police License L/PS/000267/2023P &nbsp;|&nbsp; <a href="technology.html" style="color:rgba(255,255,255,0.4); text-decoration:none;">â† Back to Products</a></p>
+    <p>&copy; 2025 Securevision Pte Ltd &nbsp;|&nbsp; Police License L/PS/000267/2023P &nbsp;|&nbsp; <a href="technology.html" style="color:rgba(255,255,255,0.4); text-decoration:none;">â† Back to Products</a></p>
     <p>+65 9386 0466 &nbsp;|&nbsp; <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-c
+
+
